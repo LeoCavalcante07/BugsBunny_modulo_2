@@ -1,0 +1,1327 @@
+ /*ÁREA DO HEADER*/
+
+@font-face{
+    font-family: titulo;
+    src: url(../fonte/PermanentMarker-Regular.ttf);
+}
+
+
+body{
+    background-color: #164059;
+    margin: 0;
+    background-image: url(../imagens/bgJornal22.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+p, h1, h2, h3, a{
+    color: white;
+}
+
+
+a, a:link, a:vlink, a:alink{
+    text-decoration: none;
+    color: white;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    font-family: titulo;
+}
+
+textarea{
+    width: 300px;
+    height: 100px;
+    resize: none;
+}
+
+div{
+    padding-top: 0;
+}
+
+#caixa_header{    
+    height: 155px;
+    width: 100%;
+    position: fixed;
+/*    background-color: black;*/
+    background-image: linear-gradient(black, #282828, black); 
+    
+    color: white;
+    z-index: 999;
+    
+}
+
+/*CAIXA QUE FICA ATRAS DO HEADER P/ CONSEGUIR EMPURRAR OS ELEMNTOS DE BAIXO*/
+#caixa_especial{
+    height: 156px;
+    width: 100%;    
+}
+
+#caixa_header_central{
+    height: 100%;
+    width: 1800px;  
+    margin-left: auto;
+    margin-right: auto;            
+}
+
+#caixa_logo{
+    height: 140px;
+    width: 150px;
+    
+    margin-top: 10px;
+    margin-left: 100px;
+    float: left;
+    background-image: url(../imagens/logo1.png);
+    background-size: cover;
+        
+}
+
+#caixa_menu{
+    height: 80px;
+    width: 900px;    
+    margin-top: 45px;
+    margin-left: 150px;
+    float: left;   
+    margin-right: 50px;
+}
+
+.caixa_optMenu{
+    height: 30px;
+    width: auto;
+    float: left;
+    padding-bottom: 5px;     
+    margin-right: 50px;
+}
+
+.caixa_optMenu:hover{    
+    border-bottom: solid 1px white;   
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+
+
+
+.caixa_optMenu p, .caixa_optMenu a:link{
+    font-size: 18px;
+    text-align: center;  
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    text-decoration: none;
+}
+
+
+
+#caixa_login{
+    height: 80px;
+    width: 450px;
+    margin-top: 10px;
+    float: left; 
+    
+}
+
+#caixa_login p{
+    font-size: 20px;
+}
+
+.caixa_seg_login_label{
+    height: 50%;
+    width: 80%;
+    float: left;  
+    
+}
+
+.caixa_login_label{
+    height: 100%;
+    width: 40%;    
+    float: left;    
+    
+}
+
+.caixa_seg_login_text{
+    height: 40%;
+    width: 80%;  
+    margin-top: 10px;
+    float: left;   
+}
+
+.caixa_login_text{
+    height: 100%;
+    width: 50%;
+    float: left;    
+}
+
+.caixa_botao{
+    
+    margin-left: 10px;
+    height: 100px;
+    width: 50px;
+    float: left;
+}
+
+.btnEntrar{
+    height: 30px;
+    width: 80px;
+    font-size: 20px;
+    background-image: linear-gradient(black, #282828, black); 
+    border: solid 0.5px white;
+    border-color: white;
+    color: white;
+}
+
+.btnEntrar:hover{
+    border-color: black;
+    border: solid 0.5px green;
+    cursor: pointer;
+}
+
+/*FIM DO HEADER*/
+
+.caixa_global{
+    width: 1410px;
+    min-height: 800px;
+    height: auto;    
+    box-shadow:0px 12px 90px black;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-image: linear-gradient(black, #7c7e7f, black); 
+/*    background-image: linear-gradient(black, #282828, black);*/
+    
+    
+    
+}
+
+#caixa_principal{
+    height: 1446px;
+    width: 1400px;    
+    float: left;
+}
+
+#secao_slider{
+    height: 600px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#caixa_itens{
+    height: 936px;
+    width: 250px;;
+
+    float: left;
+    font-size: 30px;
+    margin-top: -90px;
+    margin-left: 15px;
+    
+}
+
+#item_1{
+    height: 80px;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+}
+
+#item_2{
+    height: 80px;
+    width: 100%;
+
+    color: white;
+}
+
+#caixa_conteudo{
+    height: 1100px;
+    width: 1100px;;
+    float: left;  
+    
+}
+
+#caixa_conteudo_seg{
+    height: 30%;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    
+}
+
+#caixa_conteudo_seg2{
+    height: 30%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 20px;
+    
+}
+
+.caixa_produto{
+    height: 100%;
+    width: 300px;
+    border: solid 0.5px black;
+    float: left;
+    margin-right: 20px;
+    color: white;
+}
+
+.caixa_produto:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+.caixa_anuncio{
+    float: left;
+    height: 600px;
+    width: 300px;            
+    margin-top: 150px;
+    margin-left: 1330px;
+    position: fixed;
+}
+
+.anuncio{
+    width: 128px;
+    height: 128px;
+    margin-left: auto;
+    margin-right: auto;  
+    margin-bottom: 10px;
+}
+
+.caixa_imagem{
+    width: 50%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0.5px black;
+    
+    margin-top: 20px;
+}
+
+.caixa_descricao{
+    height: 40%;
+    width: 95%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.caixa_descricao p{
+    font-size: 20px;
+}
+
+.caixa_detalhes{
+    height: 15px;
+    width: 60px;    
+    margin-left: 230px;
+    margin-top: -20px;
+}
+
+.caixa_detalhes p{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*           PÁGINA SOBRE            */
+
+
+.caixa_principal_sobre{
+    height: 1000px;
+    width: 1410px;
+    border: solid 1px white;
+    float: left;
+}
+
+.caixa_titulo_sobre{
+    height: 100px;
+    width: 100%;
+    
+}
+
+.caixa_titulo_sobre h1{
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+    margin-top:  -1px;
+}
+
+
+
+/*PRIMEIRA SEÇAO*/
+.caixa_sobre_section1{
+    width: 1100px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+.caixa_sobre_section1_img{
+    height: 300px;
+    width: 500px;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 50px;  
+    float: left;
+}
+
+.caixa_sobre_section1_img img{
+    height: 300px;
+    width: 500px;    
+}
+
+.caixa_sobre_section1_texto{
+    height: 350px;
+    width: 500px;
+    margin-left: 100px;
+    margin-top: 50px;
+    float: left;
+}
+
+
+
+/*SEGUNDA SEÇÃO*/
+.caixa_sobre_section2{
+    width: 1200px;
+    height: 350px;  
+    margin-top: 80px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caixa_sobre_section2_text{
+    height: 300px;
+    width: 550px;
+/*
+    margin-left: 60px;
+    margin-right: 60px;
+*/
+    
+    float:left;
+}
+
+.caixa_sobre_section2_img{
+    height: 300px;
+    width: 500px;
+    margin-left: 60px;
+/*    margin-right: 60px;*/
+    background-size: cover;
+    float:left;        
+}
+
+.caixa_sobre_section2_img img{
+    height: 300px;
+    width: 500px;    
+}
+
+
+.caixa_sobre_section1_texto, .caixa_sobre_section2_text  p{
+    font-size: 22px;
+    color: white;
+    
+}
+
+
+
+
+
+
+
+
+
+
+/*       CELEBRIDADE        */
+.caixa_principal_celebridade{
+    height: auto;
+    min-height: 1000px;
+    
+    overflow: hidden;
+    width: 1410px;
+    
+    float: left;    
+}
+
+.caixa_principal_celebridade{
+    font-size: 30px;
+    color: white;
+}
+
+.caixa_seg_celebridade_sec1{
+    height: 500px;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.caixa_celebridade_titulo{
+    width: 1000px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;    
+    
+}
+
+.caixa_celebridade_titulo h1{
+    font-size: 40px;    
+    text-align: center;
+    color: white;
+    
+}
+
+
+.caixa_celebridade_mainImg{
+    width: 1000px;
+    height: 300px;    
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.caixa_celebridade_mainImg img{
+    width: 1000px;
+    height: 300px;      
+}
+
+
+.caixa_seg_celebridade_sec{
+    height: 450px;
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;  
+    
+
+}
+
+.caixa_celebridade_texto_motivo{
+    width: 400px;
+    height: 300px;     
+    color: white;
+    margin-top: 30px;
+    margin-left: 100px;
+    font-size: 20px;
+    float: left;
+    
+}
+
+.caixa_celebridade_texto_motivo p{
+    font-size: 24px;
+}
+
+
+
+.caixa_celebridade_img_motivo{
+    width: 600px;
+    height: 300px;
+    
+    background-size: cover;
+    background-repeat: no-repeat; 
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 100px;
+    float: left;
+}
+
+.caixa_celebridade_img_motivo img{
+    width: 600px;
+    height: 300px;    
+}
+
+
+
+
+.caixa_celebridade_infancia_titulo{
+    width: 400px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+
+}
+
+
+
+
+.caixa_celebridade_img_infancia{
+    width: 400px;
+    height: 300px;
+    background-color: red;
+    background-image: url(../imagens/lulabb.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 80px;
+    margin-top: 50px;
+    float: left;
+}
+
+.caixa_celebridade_texto_infancia{
+    width: 500px;
+    height: 300px;
+    color: white;
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    float: left;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*FALE CONOSCO*/
+
+.caixa_principal_fale{
+    width: 1410px;
+    height: 900px;
+    border: solid 1px white;
+    float: left;
+}
+
+.caixa_principal_fale p{
+    margin-bottom: 15px;
+}
+
+.caixa_fale_icon{
+    width: 48px;
+    height: 48px;
+    background-image: url(../imagens/contactus.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    margin-left: 500px;
+    float: left;
+}
+
+.caixa_fale_titulo{
+    width: 300px;
+    height: 50px;
+    
+    margin-left: 10px;
+    float: left;
+}
+
+.caixa_fale_titulo h1{
+    font-family: 'Permanent Marker', cursive;
+    color: white;
+}
+
+.caixa_fale_texto{
+    width: 800px;
+    height: 100px;
+    margin-top: 100px;
+    margin-left: 300px;
+}
+
+.caixa_fale_texto p{
+    font-size: 25px;
+    color: white;
+}
+
+.caixa_fale_form{
+    height: 550px;
+    width: 1200px;
+    border: solid 1px black;
+    border-radius: 35px;
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto; 
+    padding-left: 15px;
+        
+}
+
+.caixa_fale_form p{
+    color: white;
+    font-size: 20px;
+}
+
+
+.caixa_form_esquerda{
+    width: 380px;
+    height: 420px;
+    float: left;
+    margin-right: 110px;
+    
+    
+    
+}
+
+.caixa_form_direita{
+    width: 650px;
+    height: 420px;
+    float: left;  
+    border-left: solid 1px black;
+    padding-left: 40px;
+
+}
+
+.caixa_form_esquerda p{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.caixa_form_esquerda_lbl{
+    height: 100%;
+    width: 150px;
+
+    float: left;
+}
+
+.caixa_form_direita p{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.caixa_form_direita_lbl{
+    height: 100%;
+    width: 250px;
+
+    float: left;    
+}
+
+.caixa_form_direita_inputs{
+    height: 100%;
+    width: 320px;
+
+    margin-left: 20px;
+    float: left;
+}
+
+.caixa_form_esquerda_inputs{
+    height: 100%;
+    width: 200px;
+
+    float: left;
+}
+
+.btnSalvar{
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    background-image: linear-gradient(black, #282828, black); 
+    border: solid 0.5px white;
+    border-color: white;
+    margin-left: 1000px;
+    margin-top: 50px;
+    color: white;
+}
+
+
+.btnSalvar:hover{
+    background-color: black;
+    border-color: green;
+    cursor: pointer;
+    
+}
+
+
+
+/*Banca*/
+.caixa_banca_principal{
+    min-height: 1300px;
+    height: auto;
+    width: 1410px;
+    border: solid 1px white; 
+    float: left;
+}
+
+.caixa_banca_titulo{
+    height: 60px;
+    width: 100%;
+    
+    margin-top: -20px;
+    text-align: center;
+    color: white;
+}
+
+.caixa_banca_principal_img{
+    height: 200px;
+    width: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    border: solid 1px black;
+    
+    margin-right: auto;    
+}
+
+.caixa_banca_principal_img img{
+    height: 200px;
+    width: 800px;    
+}
+
+.caixa_banca_descricao{
+    height: auto;
+    min-height: 150px;
+    width: 800px;
+    margin-top: 40px;    
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+.caixa_banca_descricao p{
+    font-family: cursive;
+    color: white;
+    font-size: 25px;
+}
+
+.caixa_seg_secao1{
+    height: auto;
+    min-height: 350px;
+    width: 810px;
+    margin-top: 50px; 
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caixa_seg_secao1_2_titulo{
+    width: 250px;
+    height: 50px;
+    margin-bottom: 25px;
+    
+}
+
+.caixa_seg_secao1_2_titulo h2{
+    color: white;
+    font-size: 30px;
+}
+
+.caixa_secao1_img{
+    width: 350px;
+    height: 250px;
+    background-color: green;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    float: left;
+}
+
+.caixa_secao1_img img{
+    width: 350px;
+    height: 250px;   
+}
+
+.caixa_secao1_texto{
+    width: 350px;
+    height: auto;
+    min-height: 250px; 
+    margin-left: 100px;
+    float: left;
+}
+
+.caixa_seg_secao2{
+    height: auto;
+    min-height: 350px;
+    width: 810px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caixa_secao2_img{
+    width: 350px;
+    height: 200px;
+    background-size: cover;
+    margin-left: 100px;
+    float: left;
+}
+
+.caixa_secao2_img img{
+    width: 350px;
+    height: 200px;    
+}
+
+.caixa_secao2_texto{
+    width: 350px;
+    height: auto;
+    min-height: 250px;    
+    float: left;
+}
+
+.caixa_secao1_texto, .caixa_secao2_texto  p{
+    font-family: cursive;
+    color: white;
+    font-size: 22px;
+}
+
+
+
+
+
+
+/*DESTAQUE*/
+
+.caixa_destaque_principal{
+    height: auto;
+    min-height: 1200px;
+    width: 1410px;
+    
+    float: left;
+}
+
+
+.caixa_destaque_titulo{
+    height: 60px;
+    width: 500px;
+    
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;    
+    
+}
+
+.caixa_destaque_section1{
+    height: 350px;
+/*    min-height: 200px;  */
+    width: 850px;    
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 100px;
+    
+}
+
+
+
+.caixa_destaque_section1_titulo{
+    height: 40px;
+    width: 100px;
+    font-family: cursive;
+    font-size: 18px;
+    
+    margin-bottom: 50px;
+    
+}
+
+.caixa_destaque_section1_titulo h2{
+    color: white;
+}
+
+
+
+.caixa_destaque_section1_texto{
+    height: auto;
+    min-height: 100px;
+    width: 350px;        
+    float: left;
+}
+
+.caixa_destaque_section1_img{
+    height: 200px;
+    width: 350px;    
+    margin-left: 60px;
+    float: left;    
+}
+
+.caixa_destaque_section1_img img{
+    height: 250px;
+    width: 400px;
+}
+
+
+
+.caixa_destaque_section2{
+    height: 350px;
+    width: 850px;    
+    margin-left: auto;
+    margin-right: auto;  
+    
+    
+    
+}
+
+
+
+.caixa_destaque_section2_titulo{
+    height: 40px;
+    width: 100px;
+    font-family: cursive;
+
+    font-size: 18px;
+    margin-bottom: 50px;
+    
+}
+.caixa_destaque_section2_titulo h2{
+    color: white;
+}
+
+
+.caixa_destaque_section2_img{
+    height: 200px;
+    width: 350px;    
+    float: left;    
+}
+
+.caixa_destaque_section2_texto{
+    height: 200px;
+    width: 350px;   
+    margin-left: 60px;
+    float: left;
+}
+
+
+
+
+
+
+/*
+.caixa_destaque_section3{
+    height: 250px;
+    width: 800px;    
+    margin-left: auto;
+    margin-right: auto; 
+    
+}
+
+
+
+.caixa_destaque_section3_titulo{
+    height: 40px;
+    width: 100px;
+    font-family: cursive;
+    margin-bottom: 50px;
+    font-size: 18px;
+    
+}
+
+.caixa_destaque_section3_titulo h2{
+    color: white;
+}
+
+
+
+.caixa_destaque_section3_texto{
+    height: 200px;
+    width: 350px;        
+    float: left;
+}
+
+.caixa_destaque_section3_img{
+    height: 200px;
+    width: 350px;    
+    background-image: url(../imagens/destaque2.jpg);
+    margin-left: 60px;
+    float: left;    
+}
+*/
+
+
+.caixa_destaque_section1, .caixa_destaque_section2, .caixa_destaque_section3 p{
+    color: white;
+    font-size: 24px;
+}
+
+
+
+
+
+/*PROMOÇÕES*/
+
+.caixa_principal_promocoes{
+    width: 100%;
+    height: auto;
+    min-height: 1400px;
+    border: solid 1px white;
+    float: left;
+}
+
+.caixa_principal_promocoes p{
+    color: white;
+    font-size: 18px;
+}
+
+
+.caixa_promocoes_titulo{
+    height: 100px;
+    width: 500px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;   
+}
+
+.caixa_promocoes_principal{
+    height: 360px;
+    width: 1200px;
+    border: solid 1px black;
+    margin-left: auto;
+    margin-right: auto;   
+    margin-bottom: 100px;
+    border-radius: 30px;
+}
+
+.caixa_promocoes_principal_imagem{
+    height: 300px;
+    width: 400px;    
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 25px;    
+    margin-bottom: 28px;
+    margin-top: 28px;
+    border-radius: 30px;
+    float: left;
+}
+
+.caixa_promocoes_principal_imagem img{
+    height: 300px;
+    width: 400px;    
+}
+
+.caixa_promocoes_principal_detalhes{
+    height: 300px;
+    width: 600px;    
+
+    margin-left: 100px;    
+    margin-bottom: 28px;
+    margin-top: 28px;  
+    float: left;
+}
+
+.caixa_promocoes_principal_detalhes_nome{
+    margin-top: 25px;
+    height: 40px;
+    min-width: 100px;
+    max-width: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    
+    
+}
+
+
+
+.caixa_promocoes_principal_detalhes_nome p{
+    font-size: 40px;
+}
+
+.caixa_promocoes_principal_detalhes_descricao{
+    height: 100px;
+    width: 590px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+
+}
+
+.caixa_promocoes_principal_detalhes_descricao p{
+    font-size: 23px;
+}
+
+.caixa_promocoes_section1{
+    height: auto;
+    min-height: 360px;
+    overflow: hidden;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    
+}
+
+.caixa_promocoes_section2{
+    height: 360px;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    
+}
+
+.caixa_promocoes_section3{
+    height: 360px;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+
+
+.caixa_promocoes_produto{
+    height: 400px;
+    width: 300px;
+    margin-right: 70px;
+    padding-left: 10px;
+    float: left;
+}
+
+.caixa_promocoes_produto p{
+    font-size: 18px;
+    color: white;
+}
+
+
+.caixa_promocoes_seg_imagem{
+    margin-top: 5px;
+    background-color: red;
+    height: 150px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+
+
+.caixa_promocoes_imagem{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    width: 100%;
+    height: 350px;
+    
+/*    background-image: url(../imagens/capaRevista.webp);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.caixa_promocoes_imagem img{
+    width: 100%;
+    height: 350px;    
+}
+
+.caixa_promocoes_produto:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+.caixa_promocao_descricao{
+    height: 100px;
+    width: 100%;
+    
+
+}
+
+.caixa_promocao_detalhes{
+    margin-top: -150px;
+    margin-left: 190px;
+    height: 25px;
+    width: 113px;
+}
+
+
+.caixa_promocao_detalhes p:hover{
+    color: #03e200;
+}
+
+.caixa_promocao_detalhes_preco_antigo{
+    height: 35px;
+    width: 100px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+
+.caixa_promocao_detalhes_preco_antigo p{
+    text-decoration: line-through;
+    color: #d14747;
+    font-size: 25px;
+}
+
+.caixa_promocao_detalhes_preco_atual{
+    height: 50px;
+    width: 150px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;    
+}
+
+.caixa_promocao_detalhes_preco_atual p{
+    color: #03e200;
+    font-size: 40px;    
+}
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+#caixa_footer{
+    width: 100%;
+    height: 206px;    
+    background-color: black;
+    
+    
+}
+
+.caixa_footer_central{
+    width: 1800px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+.caixa_footer_cima{
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    
+    
+    
+
+}
+
+.caixa_footer_baixo{
+    height: 50px;
+    width: 100%;    
+     
+}
+
+
+
+.caixa_footer_cima, .caixa_footer_baixo p{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    
+}
+
+
+
+
+/*FIM DO FOOTER*/
+
+
