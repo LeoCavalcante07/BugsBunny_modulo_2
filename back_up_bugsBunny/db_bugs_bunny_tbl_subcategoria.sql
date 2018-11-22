@@ -16,29 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_niveis`
+-- Table structure for table `tbl_subcategoria`
 --
 
-DROP TABLE IF EXISTS `tbl_niveis`;
+DROP TABLE IF EXISTS `tbl_subcategoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tbl_niveis` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) NOT NULL,
-  `descricao` text NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+CREATE TABLE `tbl_subcategoria` (
+  `idSubCategoria` int(11) NOT NULL AUTO_INCREMENT,
+  `nomeSubCategoria` varchar(45) NOT NULL,
+  `desc` varchar(45) DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '1',
+  `idCategoria` int(11) NOT NULL,
+  PRIMARY KEY (`idSubCategoria`),
+  KEY `idCategoria` (`idCategoria`),
+  CONSTRAINT `tbl_subcategoria_ibfk_1` FOREIGN KEY (`idCategoria`) REFERENCES `tbl_categoria` (`idCategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_niveis`
+-- Dumping data for table `tbl_subcategoria`
 --
 
-LOCK TABLES `tbl_niveis` WRITE;
-/*!40000 ALTER TABLE `tbl_niveis` DISABLE KEYS */;
-INSERT INTO `tbl_niveis` VALUES (27,'Administrador','                                faz tudinho                                                                         ',0),(29,'Cataloguista','atualiza as paginas                                             ',0),(30,'teste do marcel 666','                                sdf dsf dsf                                                                           ',1);
-/*!40000 ALTER TABLE `tbl_niveis` ENABLE KEYS */;
+LOCK TABLES `tbl_subcategoria` WRITE;
+/*!40000 ALTER TABLE `tbl_subcategoria` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tbl_subcategoria` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-22 11:25:05
+-- Dump completed on 2018-11-22 11:25:07

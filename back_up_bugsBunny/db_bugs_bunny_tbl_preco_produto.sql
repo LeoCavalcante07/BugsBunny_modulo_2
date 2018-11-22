@@ -28,11 +28,11 @@ CREATE TABLE `tbl_preco_produto` (
   `preco` double NOT NULL,
   `from_date` date NOT NULL,
   `to_date` date DEFAULT NULL,
-  `promocao` tinyint(4) DEFAULT '0',
+  `promocao` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idPrecoProduto`),
   KEY `idProduto_idx` (`idProduto`),
   CONSTRAINT `idProduto` FOREIGN KEY (`idProduto`) REFERENCES `tbl_produto` (`idProduto`)
-) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,6 @@ CREATE TABLE `tbl_preco_produto` (
 
 LOCK TABLES `tbl_preco_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_preco_produto` DISABLE KEYS */;
-INSERT INTO `tbl_preco_produto` VALUES (1,1,25,'1999-01-01','2010-11-10',0),(3,2,9,'1999-01-01','1999-01-03',0),(4,2,5,'1999-01-03','2010-11-10',0),(5,3,50,'1999-01-03','1999-01-05',0),(6,3,20,'1999-01-05',NULL,0),(7,4,500,'1999-01-10','1999-01-11',0),(8,4,100,'1999-01-11',NULL,1),(85,1,5,'2010-11-10','2010-11-11',0),(86,1,50,'2010-11-11','2010-11-11',0),(87,1,10,'2010-11-11',NULL,1),(88,2,5,'2010-11-10','2010-11-12',0),(89,2,4,'2010-11-12',NULL,1);
 /*!40000 ALTER TABLE `tbl_preco_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-08 11:24:09
+-- Dump completed on 2018-11-22 11:25:05

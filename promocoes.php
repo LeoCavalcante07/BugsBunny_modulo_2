@@ -42,22 +42,17 @@
         
         $precoAntigo = $rsPrecoAntigo['preco'];
         
-//        if($precoAtual > $precoAntigo){
-//            header("location:promocoes.php");
-//        }
+        if($precoAtual > $precoAntigo){
+            $sql = "update tbl_preco_produto set promocao = 0 where idProduto = ".$id;
+            
+            mysqli_query($conexao, $sql);
+            header("location:promocoes.php");
+        }
         
-        
-        
+   
     }
 
-
-    
-
 ?>
-
-
-
-
 
 
 <!doctype html>

@@ -26,10 +26,14 @@ CREATE TABLE `tbl_produto` (
   `idProduto` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   `desc` text NOT NULL,
-  `foto` varchar(100) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`idProduto`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+  `foto` varchar(45) NOT NULL,
+  `status` tinyint(4) NOT NULL,
+  `acesso` int(11) NOT NULL,
+  `idSubCategoria` int(11) NOT NULL,
+  PRIMARY KEY (`idProduto`),
+  KEY `idSubCategoria_idx` (`idSubCategoria`),
+  CONSTRAINT `idSubCategoria` FOREIGN KEY (`idSubCategoria`) REFERENCES `tbl_subcategoria` (`idSubCategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +42,6 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
-INSERT INTO `tbl_produto` VALUES (1,'Veja','revista que aborda as principais noticias da atualialidade','imagens/capaRevista.webp',1),(2,'Time','Revista sobre o tempo blabçabçabababbababab','imagens/time.jpg',1),(3,'Show','ksdnkasndksakdsalkjdksa','imagens/show.jpg',1),(4,'teen','asjgkasdjgkhsdkghksghdkrhseg','imagens/teen.jpg',1),(5,'teste','hjhhihihi','imagens/imgMain.jpg',1),(6,'aaa','sdkfhjksadfhjsadbfjbh','imagens/show.jpg',1),(7,'nfjrsefkjd','jsbafjksadfjbjadsfbjebfjab','imagens/time.jpg',1);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-08 11:24:11
+-- Dump completed on 2018-11-22 11:25:07
