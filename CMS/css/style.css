@@ -545,6 +545,14 @@ a{
 
 /*ADM PRODUTOS*/
 
+.segFormProduto{
+    margin-top: 100px;
+    width: 500px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;border: solid 1px black;]
+}
+
 .seg_produtos{
     height: auto;
     min-height: 360px;
@@ -560,7 +568,7 @@ a{
     width: 300px;
     margin-right: 70px;
     padding-left: 10px;
-/*    border: solid 1px black; */
+    border: solid 1px black; 
     margin-bottom: 70px;
     float: left;    
 }

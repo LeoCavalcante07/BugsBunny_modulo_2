@@ -214,27 +214,63 @@ div{
 #caixa_itens{
     height: 936px;
     width: 250px;;
-
+    border: solid 1px black;
     float: left;
     font-size: 30px;
     margin-top: -90px;
     margin-left: 15px;
+/*    border-radius: 32px;*/
     
 }
 
-#item_1{
-    height: 80px;
-    width: 100%;
+.item_1{
+    padding: 15px;
+    height: 60px;
+    width: 221px;
     font-size: 30px;
     color: white;
+    border-bottom: solid 1px black;
 }
 
+.subMenu{
+    width: 0px;
+    height: 0px;
+    
+/*    margin-left: -16px;*/
+/*    margin-top: 36px;*/
+    margin-top: -78px;  
+    margin-left: 236px;
+    overflow: hidden;
+    background-image: linear-gradient(#282828, black); 
+    position: relative;
+}
+
+.item_1:hover{
+    cursor: pointer;
+    width: 196px;
+    margin-left: 25px;
+    transition: 1s;
+}
+
+.item_1:hover > .subMenu{
+    width: 300px;
+    height: auto;
+    margin-left: 211px;
+    min-height: 95px;
+    transition: 1s;
+    cursor: pointer;
+    overflow: visible;
+}
+
+
+/*
 #item_2{
     height: 80px;
     width: 100%;
 
     color: white;
 }
+*/
 
 #caixa_conteudo{
     height: 1100px;

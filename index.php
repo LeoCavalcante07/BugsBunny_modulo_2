@@ -197,13 +197,47 @@
                 </div>
                 <section>
                     <div id="caixa_itens">
-                        <div id="item_1">
-                            Item 1
-                        </div>
+                        <?php
+//                            $sql = "select c.nomeCategoria, sc.nomeSubCategoria from tbl_categoria as c, tbl_subcategoria as sc where c.status = 1 and sc.status = 1 and c.idCategoria = sc.idCategoria";
+                                    
+                            $sql = "select * from tbl_categoria where status = 1";
+                                    
+                            $select = mysqli_query($conexao, $sql);
+                                    
+                            while($rsConsulta = mysqli_fetch_array($select)){
+                                
+                                    
+                            
+                        ?>
+                        <div class="item_1">
+                            <?php 
+                                echo($rsConsulta['nomeCategoria']);
+                                    
+                                $sql2 = "select * from tbl_subcategoria where status = 1 and idCategoria = ".$rsConsulta['idCategoria'];
+                            
+                                $select2 = mysqli_query($conexao, $sql2);
+                                
+                                while($rsConsulta2 = mysqli_fetch_array($select2)){
+                                
+                            ?>
+                            <div class="subMenu">
+                                <ul>
+                                    <li>
+                                        <?php echo($rsConsulta2['nomeSubCategoria'])?>
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            
+                            <?php
+                                }
+                            ?>
+                            
+                        </div>  
                         
-                        <div id="item_2">
-                            Item 2
-                        </div>                        
+                        <?php
+                            }
+                        ?>
                     </div>
 
                     <div id="caixa_conteudo">

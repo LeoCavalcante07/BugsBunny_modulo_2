@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
 --
 -- Host: localhost    Database: db_bugs_bunny
 -- ------------------------------------------------------
--- Server version	5.6.10-log
+-- Server version	8.0.12
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+ SET NAMES utf8 ;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,7 +21,7 @@
 
 DROP TABLE IF EXISTS `tbl_subcategoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+ SET character_set_client = utf8mb4 ;
 CREATE TABLE `tbl_subcategoria` (
   `idSubCategoria` int(11) NOT NULL AUTO_INCREMENT,
   `nomeSubCategoria` varchar(45) NOT NULL,
@@ -30,8 +30,8 @@ CREATE TABLE `tbl_subcategoria` (
   `idCategoria` int(11) NOT NULL,
   PRIMARY KEY (`idSubCategoria`),
   KEY `idCategoria` (`idCategoria`),
-  CONSTRAINT `tbl_subcategoria_ibfk_1` FOREIGN KEY (`idCategoria`) REFERENCES `tbl_categoria` (`idCategoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `tbl_subcategoria_ibfk_1` FOREIGN KEY (`idCategoria`) REFERENCES `tbl_categoria` (`idcategoria`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `tbl_subcategoria` (
 
 LOCK TABLES `tbl_subcategoria` WRITE;
 /*!40000 ALTER TABLE `tbl_subcategoria` DISABLE KEYS */;
+INSERT INTO `tbl_subcategoria` VALUES (1,'romance dramático','rmance com morte',1,2),(2,'romance terror','romance co toque de morte sangrenta',1,2),(3,'terror sangrento','terror zaodo',1,1),(4,'terror espirito','terror com demonio',1,1);
 /*!40000 ALTER TABLE `tbl_subcategoria` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-22 11:25:07
+-- Dump completed on 2018-11-22 16:53:37

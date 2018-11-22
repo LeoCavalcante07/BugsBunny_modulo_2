@@ -17,6 +17,23 @@
     $rsUsuario = mysqli_fetch_array($select);
 
     $userLogado = $rsUsuario['nome'];
+
+
+    if(isset($_POST['btnCadastrar'])){
+        $nome = $_POST['txtNomeProduto'];
+        $idSubCategoria = $_POST['cbSubCategoria'];
+        $desc = $_POST['txtDescProduto'];
+        $foto = $_POST['txtNomeFoto'];
+        
+        $sql = "insert into tbl_produto(nome, desc, foto, idSubCategoria) values('".$nome."', '".$desc."', '".$foto."', ".$idSubCategoria.")";
+        
+        var_dump($sql);
+        
+        mysqli_query($conexao, $sql);
+        
+        //header("location:admProduto.php");
+        
+    }
     
 
 
@@ -26,11 +43,6 @@
 ?>
 
 
-
-
-
-
-
 <!doctype html>
 
 <html>
@@ -38,6 +50,34 @@
         <link rel="stylesheet" href="css/style.css" type="text/css">
         
         <meta charset="utf-8">
+        
+        <script src="../js/jquery.min.js"></script>
+        <script src="../engine1/jquery.form.js"></script>
+        
+        <script>
+            
+           
+        
+            $(document).ready(function(){
+                
+               $('#fleFoto').live('change', function(){
+                  
+                   
+                    $('#frmFoto').ajaxForm({                        
+                        target:'#visualizarFoto'
+
+                    }).submit();                    
+                   
+               });            
+                
+   
+            });
+            
+            
+           
+    
+        
+        </script>        
         
 
     </head>
@@ -142,9 +182,53 @@
             
 <!--            Fim Menu      -->
             
-            
+            <div class="segFormProduto">
+                <div id="visualizarFoto" style="width: 100%;">
+                
+                </div>
+                <form id="frmFoto" action="upload.php" method="post" enctype="multipart/form-data">
+                    <input type="file" id="fleFoto" name="fleFoto">
+                </form>
+                
+                <form id="frmCadastro" action="admProduto.php" method="post">
+                    <input type="text" name="txtNomeFoto" style="display: none;">
+                    <br>
+                    Nome do produto: <input type="text" name="txtNomeProduto">
+                    
+                    <br><br>
+                    
+                    Categoria:                     
+                    <select name="cbSubCategoria">
+                        <?php
+                            $sql = "select idSubCategoria, nomeSubCategoria from tbl_subcategoria where status = 1";
+                            
+                            $select = mysqli_query($conexao, $sql);
+                            
+                            while($rsConsulta = mysqli_fetch_array($select)){
+                        ?>
+                        
+                            <option value="<?php echo($rsConsulta['idSubCategoria'])?>">
+                                <?php echo($rsConsulta['nomeSubCategoria'])?>
+                            </option>
+                        
+                        <?php
+                            }
+                        ?>
+                    </select>
+                    <br><br>
+                    Descrição:<br>
+                    <textarea name="txtDescProduto" style="resize: none;">
+                    
+                    </textarea>
+                    
+                    <br><br>
+                    
+                    <input type="submit" name="btnCadastrar" value="Cadastrar">
+                </form>
+            </div>
 
-            <div class="seg_produtos">
+            
+            <div class="seg_produtos">                
                 <?php 
                     $sql = "select * from tbl_produto where status = 1";
                 
