@@ -29,7 +29,7 @@ CREATE TABLE `tbl_destaque` (
   `foto` varchar(100) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`idDestaque`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `tbl_destaque` (
 
 LOCK TABLES `tbl_destaque` WRITE;
 /*!40000 ALTER TABLE `tbl_destaque` DISABLE KEYS */;
-INSERT INTO `tbl_destaque` VALUES (4,'aaa','começava a se esfriar. O peso dos anos fazia suas penas se esfarelarem e sua chama amiudar. Percebeu que era a hora da partida. Olhou para o céu estrelado, morrer era uma das leis da natureza, mas nem por isso era algo bom. Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.                    ','arquivos/2acf4114d9de48c4420eade4a7150777.jpg',1),(6,'Noticia 01 666','                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.\r\nNunc viverra imperdiet enim. Fusce est. Vivamus a tellus.\r\n                                             ','arquivos/241eee30ea2e9cb3567f4b5bae1c18d9.jpg',0);
+INSERT INTO `tbl_destaque` VALUES (8,'Roubo de avião','Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.\r\nApós alguns segundos, as partículas das cinzas começaram a se agitar a ponto de queimarem.                                             ','arquivos/fdade1ea6656bcc6210c1cd0f7263e83.jpg',1),(9,'celular mais caro do mundo','Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.\r\nApós alguns segundos, as partículas das cinzas começaram a se agitar a ponto de queimarem.                                             ','arquivos/00e9b4579bddac3fda9ed58711c1e98c.jpg',1);
 /*!40000 ALTER TABLE `tbl_destaque` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-22 16:53:36
+-- Dump completed on 2018-11-23 16:53:50

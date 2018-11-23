@@ -25,15 +25,15 @@ DROP TABLE IF EXISTS `tbl_produto`;
 CREATE TABLE `tbl_produto` (
   `idProduto` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
-  `desc` text NOT NULL,
+  `descricao` text NOT NULL,
   `foto` varchar(45) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
-  `acesso` int(11) NOT NULL,
+  `acesso` int(11) DEFAULT NULL,
   `idSubCategoria` int(11) NOT NULL,
   PRIMARY KEY (`idProduto`),
   KEY `idSubCategoria_idx` (`idSubCategoria`),
   CONSTRAINT `idSubCategoria` FOREIGN KEY (`idSubCategoria`) REFERENCES `tbl_subcategoria` (`idsubcategoria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,6 +42,7 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
+INSERT INTO `tbl_produto` VALUES (2,'rock','dfaadsfad     \r\n                    ','arquivos/9be0de321a2ae9461dfcd23ae005a79e.jpg',1,NULL,3),(3,'show','   safasdfsd                 \r\n                    ','arquivos/6d9849aad702afee01bf7b68d5012310.jpg',1,NULL,1),(4,'galileu','                trtrtrtrtr    \r\n                    ','arquivos/8157f09d4c9df7dfa24c7874ee9e0047.jpg',1,NULL,3);
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-22 16:53:36
+-- Dump completed on 2018-11-23 16:53:50

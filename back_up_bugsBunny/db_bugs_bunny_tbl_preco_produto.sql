@@ -31,8 +31,8 @@ CREATE TABLE `tbl_preco_produto` (
   `promocao` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idPrecoProduto`),
   KEY `idProduto_idx` (`idProduto`),
-  CONSTRAINT `idProduto` FOREIGN KEY (`idProduto`) REFERENCES `tbl_produto` (`idproduto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  CONSTRAINT `idProduto` FOREIGN KEY (`idProduto`) REFERENCES `tbl_produto` (`idProduto`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `tbl_preco_produto` (
 
 LOCK TABLES `tbl_preco_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_preco_produto` DISABLE KEYS */;
+INSERT INTO `tbl_preco_produto` VALUES (1,2,100,'2018-11-21','2018-11-22','0'),(2,2,90,'2018-11-22',NULL,'1'),(3,3,1000,'2018-11-10','2018-11-20','0'),(4,3,100,'2018-11-20','2018-11-22','0'),(5,3,1000,'2018-11-22','2018-11-22','0'),(6,3,100,'2018-11-22',NULL,'1'),(7,4,100,'2000-01-01','2018-11-22','0'),(8,4,1000,'2018-11-22','2018-11-02','0'),(9,4,500,'2018-11-02',NULL,'1');
 /*!40000 ALTER TABLE `tbl_preco_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-22 16:53:32
+-- Dump completed on 2018-11-23 16:53:45

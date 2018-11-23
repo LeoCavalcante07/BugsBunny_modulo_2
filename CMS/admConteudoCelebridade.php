@@ -16,8 +16,8 @@
 
     $idCelebridade = "";
 
-    if(isset($_GET['id'])){
-        $_SESSION['idCelebridade'] = $_GET['id'];
+    if(isset($_GET['idCelebridade'])){
+        $_SESSION['idCelebridade'] = $_GET['idCelebridade'];
     }
 
     
@@ -74,8 +74,21 @@
         $_SESSION['id'] = $id;
         
         if($modo == "excluir"){
+            
+            $sql = "select foto, banner from tbl_conteudo_celebridade where idConteudoCelebridade = ".$id;
+            
+            $select  = mysqli_query($conexao, $sql);
+            
+            $rsFoto = mysqli_fetch_array($select);
+            
+            
+            unlink($rsFoto['foto']);            
+            unlink($rsFoto['banner']);
+            
             $sql = "delete from tbl_conteudo_celebridade where idConteudoCelebridade =".$id;
-            var_dump($sql);
+            
+            //var_dump($sql);
+            
             if(mysqli_query($conexao, $sql)){
                 echo("<script>alert('Noticia excluida com sucesso')</script>");
                 header("location:admConteudoCelebridade.php");
@@ -105,7 +118,7 @@
 
 
     if(isset($_GET['atualizarStatus'])){
-        echo("entrou");
+        
         
         $id = $_GET['id'];
         
@@ -373,10 +386,7 @@
                     
 //                    $sql = "select cc.idConteudoCelebridade, cc.titulo, cc.texto, cc.foto, cc.banner, cc.status, c.status  from tbl_conteudo_celebridade as cc, tbl_celebridade as c where cc.status = 1 and c.status = 1 and cc.idCelebridade = ".$_SESSION['idCelebridade'];
     
-                    $sql = "select * from tbl_conteudo_celebridade where idCelebridade  = ".$_SESSION['idCelebridade'];
-                        
-                    var_dump($sql);
-                        
+                    $sql = "select * from tbl_conteudo_celebridade where idCelebridade  = ".$_SESSION['idCelebridade'];                                                                    
                     $select = mysqli_query($conexao, $sql);
                     
                     $i = 0; // variavel que sera concatenada com o id de cada objeto FILE para diferencia-los

@@ -68,6 +68,17 @@
         $_SESSION['id'] = $id;
         
         if($modo == "excluir"){
+            
+            $sql = "select foto from tbl_banca where idBanca = ".$id;
+            
+            $select  = mysqli_query($conexao, $sql);
+            
+            $rsFoto = mysqli_fetch_array($select);
+            
+            
+            unlink($rsFoto['foto']);            
+            
+            
             $sql = "delete from tbl_banca where idBanca =".$id;
             
             if(mysqli_query($conexao, $sql)){

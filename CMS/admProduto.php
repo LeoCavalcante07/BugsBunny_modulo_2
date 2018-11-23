@@ -25,13 +25,13 @@
         $desc = $_POST['txtDescProduto'];
         $foto = $_POST['txtNomeFoto'];
         
-        $sql = "insert into tbl_produto(nome, desc, foto, idSubCategoria) values('".$nome."', '".$desc."', '".$foto."', ".$idSubCategoria.")";
+        $sql = "insert into tbl_produto(nome, descricao, foto, idSubCategoria) values('".$nome."', '".$desc."', '".$foto."', ".$idSubCategoria.")";
         
-        var_dump($sql);
+        //var_dump($sql);
         
         mysqli_query($conexao, $sql);
         
-        //header("location:admProduto.php");
+        header("location:admProduto.php");
         
     }
     
@@ -240,7 +240,7 @@
                 ?>
                 <a>
                 <div class="caixa_seg_produto">
-                    <img src="../<?php echo($rsConsulta['foto'])?>">
+                    <img src="<?php echo($rsConsulta['foto'])?>">
                     
                     
                     <a href="auxiliar.php?idProduto=<?php echo($rsConsulta['idProduto'])?>">Adicionar Promoção</a>

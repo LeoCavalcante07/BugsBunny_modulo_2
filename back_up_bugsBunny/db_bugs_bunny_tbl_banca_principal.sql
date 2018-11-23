@@ -28,7 +28,7 @@ CREATE TABLE `tbl_banca_principal` (
   `texto` text NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idBancaPrincipal`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `tbl_banca_principal` (
 
 LOCK TABLES `tbl_banca_principal` WRITE;
 /*!40000 ALTER TABLE `tbl_banca_principal` DISABLE KEYS */;
-INSERT INTO `tbl_banca_principal` VALUES (7,'arquivos/f578be4564c73c9f06aaf7f7bf1ad9b5.jpg','                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.\r\nNunc viverra imperdiet enim. Fusce est. Vivamus a tellus.\r\n                       ',1);
+INSERT INTO `tbl_banca_principal` VALUES (9,'arquivos/0044dac9e6ea75302e01e97cde289978.jpg','       Após alguns segundos, as partículas das cinzas começaram a se agitar a ponto de queimarem.                                      ',1);
 /*!40000 ALTER TABLE `tbl_banca_principal` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-22 16:53:37
+-- Dump completed on 2018-11-23 16:53:51

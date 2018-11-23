@@ -550,7 +550,8 @@ a{
     width: 500px;
     height: 600px;
     margin-left: auto;
-    margin-right: auto;border: solid 1px black;]
+    margin-right: auto;border: solid 1px black;
+    margin-bottom: 100px;
 }
 
 .seg_produtos{

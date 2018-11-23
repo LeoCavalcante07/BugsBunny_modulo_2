@@ -149,7 +149,7 @@
                         <section>
                             <div class="caixa_destaque_section1_titulo">
                                 <h2><?php echo($rsDestaque['titulo']);?></h2>
-                                <h2></h2>
+                               
                             </div>
 
                             <div class="caixa_destaque_section1_texto">

@@ -66,10 +66,22 @@
         $_SESSION['id'] = $id;
         
         if($modo == "excluir"){
+            $sql = "select foto from tbl_celebridade where idCelebridade = ".$id;
+            
+            $select  = mysqli_query($conexao, $sql);
+            
+            $rsFoto = mysqli_fetch_array($select);
+            
+            
+            unlink($rsFoto['foto']);
+            
+            
+            
+            
             $sql = "delete from tbl_celebridade where idCelebridade =".$id;
             
             if(mysqli_query($conexao, $sql)){
-                echo("<script>alert('Noticia excluida com sucesso')</script>");
+                //echo("<script>alert('Noticia excluida com sucesso')</script>");
                 header("location:admCelebridades.php"); 
             }
             
@@ -92,9 +104,10 @@
 
 
 
-    if(isset($_GET['id'])){
-        $_SESSION['idCelebridade'] = $_GET['id'];
-        header("location:admConteudoCelebridade.php");
+    //para entrar nesse bloco, deve existir o id, mas sem o modo, se não confunde com ainstruçao do excluir e editar
+    if(isset($_GET['addProduto'])){
+       // $_SESSION['idCelebridade'] = $_GET['id'];
+        header("location:admConteudoCelebridade.php?idCelebridade=".$_GET['id']);
     }
 
 
@@ -232,18 +245,19 @@
                     </div>
                     
                     
-                    <a href="admProduto.php">
+                    
                         <div class="caixa_menu_adm">
+                            <a href="admProduto.php">                                
+                                <div class="caixa_menu_adm_img">
+                                    <img src="imagens/admProduct.png">
+                                </div>
 
-                            <div class="caixa_menu_adm_img">
-                                <img src="imagens/admProduct.png">
-                            </div>
-
-                            <div class="caixa_menu_adm_titulo">
-                                <p>Produtos</p>
-                            </div>                    
+                                <div class="caixa_menu_adm_titulo">
+                                    <p>Produtos</p>
+                                </div>   
+                            </a>
                         </div>
-                    </a>                    
+                                       
 
                     
                     <div class="caixa_menu_adm">
@@ -373,7 +387,7 @@
                                 <img src="imagens/edit.png">
                             </a>
                             
-                            <a href="admCelebridades.php?id=<?php echo($rsDestaque['idCelebridade'])?>">
+                            <a href="admCelebridades.php?id=<?php echo($rsDestaque['idCelebridade'])?>&addProduto">
                                 <img src="imagens/add.png">
                             </a>
                             

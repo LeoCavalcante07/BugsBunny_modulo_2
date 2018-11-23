@@ -29,7 +29,7 @@ CREATE TABLE `tbl_banca` (
   `texto` text NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`idBanca`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `tbl_banca` (
 
 LOCK TABLES `tbl_banca` WRITE;
 /*!40000 ALTER TABLE `tbl_banca` DISABLE KEYS */;
-INSERT INTO `tbl_banca` VALUES (4,'teste','arquivos/ecf107c6a8d3f502bafef087a8956794.jpeg','Pousou em meio às rochas. Suas asas se fecharam, seu corpo começava a se esfriar. O peso dos anos fazia suas penas se esfarelarem e sua chama amiudar. Percebeu que era a hora da partida. Olhou                                                   ',0),(5,'haha','arquivos/1472a938e8edb66385278902b8fc3e6a.jpg','Pousou em meio às rochas. Suas asas se fecharam, seu corpo começava a se esfriar. O peso dos anos fazia suas penas se esfarelarem e sua chama amiudar. Percebeu que era a hora da partida. Olhou                                                              ',0),(6,'hehehe','arquivos/bde044b717074dd37c583af15dc477c5.jpg','Pousou em meio às rochas. Suas asas se fecharam, seu corpo começava a se esfriar. O peso dos anos fazia suas penas se esfarelarem e sua chama amiudar. Percebeu que era a hora da partida. Olhou \r\ngfdsag\r\nsag\r\ndsgsdfgds\r\nfgds\r\ngsd                                                                ',1),(9,'banca 02 9999','arquivos/1083e839b5a2ff653845fecef123cd29.png','                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.\r\nNunc viverra imperdiet enim. Fusce est. Vivamus a tellus.\r\n                                               ',1);
+INSERT INTO `tbl_banca` VALUES (11,'Paulista','arquivos/31dc48141cf97e6b1352cd964ef2824c.jpg','       Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.\r\nApós alguns segundos, as partículas das cinzas começaram a se agitar a ponto de queimarem.                                      ',1),(12,'Ruas das Rosas','arquivos/034e0676a6b7b01e26b3c58d75067380.jpeg','Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.\r\nApós alguns segundos, as partículas das cinzas começaram a se agitar a ponto de queimarem.                                             ',1);
 /*!40000 ALTER TABLE `tbl_banca` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-22 16:53:34
+-- Dump completed on 2018-11-23 16:53:48

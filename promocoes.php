@@ -16,16 +16,15 @@
         
 //        $sql = "select p.nome, p.desc, p.foto, pp.preco from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.to_date is null and p.idProduto = ".$id." and pp.idProduto = ".$id;
         
-        $sql = "select p.nome, p.desc, p.foto, pp.preco, pp.from_date from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.to_date is null and p.idProduto = ".$id." and pp.idProduto = ".$id; 
+        $sql = "select p.nome, p.descricao, p.foto, pp.preco, pp.from_date from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.to_date is null and p.idProduto = ".$id." and pp.idProduto = ".$id; 
         
         
-        //var_dump($sql);
         $select = mysqli_query($conexao, $sql);
         $rsConsulta = mysqli_fetch_array($select);
         
         $imgPromocao = $rsConsulta['foto'];
         $tituloPromocao = $rsConsulta['nome'];
-        $descPromocao = $rsConsulta['desc'];
+        $descPromocao = $rsConsulta['descricao'];
         $precoAtual = $rsConsulta['preco'];
         
         $from_date_preco_atual = $rsConsulta['from_date'];
@@ -46,10 +45,46 @@
             $sql = "update tbl_preco_produto set promocao = 0 where idProduto = ".$id;
             
             mysqli_query($conexao, $sql);
-            header("location:promocoes.php");
+                header("location:promocoes.php");
         }
         
    
+    }else{ //ANTES DE QUALQUER ITEM SER CLCIADO PUXA UMA PROMOCAO ALATORIA
+        $sql = "select p.idProduto from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.promocao = 1 and pp.idProduto = p.idProduto order by rand() limit 0,1";
+        
+        $select = mysqli_query($conexao, $sql);
+        
+        $rsConsulta = mysqli_fetch_array($select);
+        
+        $idProduto = $rsConsulta['idProduto'];
+        
+        
+        $sql = "select p.nome, p.descricao, p.foto, pp.preco, pp.from_date from tbl_produto as p, tbl_preco_produto as pp where p.idProduto = ".$idProduto." and pp.idProduto = ".$idProduto." and p.status = 1 and pp.to_date is null"; 
+        
+        
+        $select = mysqli_query($conexao, $sql);
+        $rsConsulta = mysqli_fetch_array($select);
+        //var_dump($sql);
+        
+        $imgPromocao = $rsConsulta['foto'];
+        $tituloPromocao = $rsConsulta['nome'];
+        $descPromocao = $rsConsulta['descricao'];
+        $precoAtual = $rsConsulta['preco'];
+        
+        $from_date_preco_atual = $rsConsulta['from_date'];
+        
+        $sql2 = "select preco from tbl_preco_produto where idProduto = ".$idProduto." and to_date ='".$from_date_preco_atual."'";
+        
+        
+        
+        var_dump($sql2);
+        
+        $select2 = mysqli_query($conexao, $sql2);
+        
+        $rsPrecoAntigo = mysqli_fetch_array($select2);
+        
+        $precoAntigo = $rsPrecoAntigo['preco'];
+        
     }
 
 ?>
@@ -192,7 +227,7 @@
                 
                 <div class="caixa_promocoes_principal">
                     <div class="caixa_promocoes_principal_imagem">
-                        <img src="<?php echo($imgPromocao)?>">
+                        <img src="CMS/<?php echo($imgPromocao)?>">
                         
                     </div>
                             <div class="caixa_promocoes_principal_detalhes">
@@ -230,7 +265,7 @@
                         <a href="promocoes.php?id=<?php echo($rsConsulta['idProduto'])?>" class="verPromocao">
                             <div class="caixa_promocoes_seg_imagem">
                                 <div class="caixa_promocoes_imagem">
-                                    <img src="<?php echo($rsConsulta['foto'])?>">
+                                    <img src="CMS/<?php echo($rsConsulta['foto'])?>">
                                 </div>
 
                             </div>

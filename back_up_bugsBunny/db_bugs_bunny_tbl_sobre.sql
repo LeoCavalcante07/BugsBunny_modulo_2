@@ -29,7 +29,7 @@ CREATE TABLE `tbl_sobre` (
   `texto` text NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`idSobre`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `tbl_sobre` (
 
 LOCK TABLES `tbl_sobre` WRITE;
 /*!40000 ALTER TABLE `tbl_sobre` DISABLE KEYS */;
-INSERT INTO `tbl_sobre` VALUES (1,'teste','arquivos/99978dc42fe146965d62532ee55ba4bb.jpg',' começava a se esfriar. O peso dos anos fazia suas penas se esfarelarem e sua chama amiudar. Percebeu que era a hora da partida. Olhou para o céu estrelado, morrer era uma das leis da natureza, mas nem por isso era algo bom. Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.                    ',1),(3,'Sobre a minha loja 666','arquivos/be1a401443978aec61af5015f7aeb3be.jpg','                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.\r\nNunc viverra imperdiet enim. Fusce est. Vivamus a tellus.\r\n                                                ',1);
+INSERT INTO `tbl_sobre` VALUES (6,'Primeira Banca','arquivos/c2894103a1f5d9e1dae9693182e84625.jpg',' Pousou em meio às rochas. Suas asas se fecharam, seu corpo começava a se esfriar. O peso dos anos fazia suas penas se esfarelarem e sua chama amiudar. Percebeu que era a hora da partida. Olhou                                            ',1),(7,'Abordagem Inicial','arquivos/b512221336185af9d3b0619f1872e920.png','      para o céu estrelado, morrer era uma das leis da natureza, mas nem por isso era algo bom. Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras                                      ',1);
 /*!40000 ALTER TABLE `tbl_sobre` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-22 16:53:38
+-- Dump completed on 2018-11-23 16:53:52
