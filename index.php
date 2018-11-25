@@ -7,6 +7,8 @@
 
     $noUser = "";
 
+    $sqlProdutos = "select p.idProduto, p.nome, p.foto, p.status, p.acesso, pp.idProduto, pp.preco, pp.to_date, pp.promocao from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.idProduto = p.idProduto and pp.to_date is null order by rand() limit 0,6";
+
 
 
     if(isset($_POST['btnEntrar'])){
@@ -29,6 +31,17 @@
         }else{
             //echo("<script> alert('Usuário ou senha incorreta') </script>");
             $noUser  = "Usuário ou senha incorreto";
+        }
+    }
+
+
+    if(isset($_GET['modo'])){
+        $modo = $_GET['modo'];
+        if($modo == "subcategoria"){
+            $idSubCategoria = $_GET['idSubCategoria'];
+            
+            $sqlProdutos = "select p.idProduto, p.nome, p.foto, p.status, p.acesso, pp.idProduto, pp.preco, pp.to_date, pp.promocao from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.idProduto = p.idProduto and pp.to_date is null and p.idSubCategoria = ".$idSubCategoria." order by rand() limit 0,6";
+            var_dump($sqlProdutos);
         }
     }
 
@@ -223,7 +236,10 @@
                             <div class="subMenu">
                                 <ul>
                                     <li>
-                                        <?php echo($rsConsulta2['nomeSubCategoria'])?>
+                                        <a href="index.php?modo=subcategoria&idSubCategoria=<?php echo($rsConsulta2['idSubCategoria'])?>" style="text-decoration: none;">
+                                         <?php echo($rsConsulta2['nomeSubCategoria'])?>
+                                        </a>
+                                        
                                     </li>
                                 </ul>
                                 
@@ -242,104 +258,43 @@
 
                     <div id="caixa_conteudo">
                         <div id="caixa_conteudo_seg">
+                            <?php
+                                $sql = $sqlProdutos;
+                            
+                                $select = mysqli_query($conexao, $sql);
+                            
+                                while($rsConsulta = mysqli_fetch_array($select)){
+                            ?>
                             <div class="caixa_produto">
                                 <div class="caixa_imagem">
-                                
+                                    <img src="CMS/<?php echo($rsConsulta['foto'])?>">
+                                    
                                 </div>
                                 
                                 <div class="caixa_descricao">
-                                    <p>Nome:</p>
-                                    <p>Descrição:</p>
-                                    <p>Preço:</p>                                
+                                    <p>
+                                        Nome: <?php echo($rsConsulta['nome'])?>
+                                    </p>
+                                    <p>
+                                        Descrição:
+                                    </p>
+                                    <p>
+                                        Preço: <?php echo($rsConsulta['preco'])?>
+                                    </p>                                
                                 </div>
                                 
                                 <div class="caixa_detalhes">
                                     <p>Detalhes</p>
                                 </div>
                             </div>
-
-                            <div class="caixa_produto">
-                                <div class="caixa_imagem">
-                                
-                                </div>
-                                
-                                <div class="caixa_descricao">
-                                    <p>Nome:</p>
-                                    <p>Descrição:</p>
-                                    <p>Preço:</p>                                
-                                </div>
-                                
-                                <div class="caixa_detalhes">
-                                    <p>Detalhes</p>
-                                </div>
-                            </div>
-
-                            <div class="caixa_produto">
-                                <div class="caixa_imagem">
-                                
-                                </div>
-                                
-                                <div class="caixa_descricao">
-                                    <p>Nome:</p>
-                                    <p>Descrição:</p>
-                                    <p>Preço:</p>                                
-                                </div>
-                                
-                                <div class="caixa_detalhes">
-                                    <p>Detalhes</p>
-                                </div>
-                            </div>                        
+                            
+                            <?php
+                                }
+                            ?>
+                     
                         </div>
 
-                        <div id="caixa_conteudo_seg2">
-                            <div class="caixa_produto">
-                                <div class="caixa_imagem">
-                                
-                                </div>
-                                
-                                <div class="caixa_descricao">
-                                    <p>Nome:</p>
-                                    <p>Descrição:</p>
-                                    <p>Preço:</p>                                
-                                </div>
-                                
-                                <div class="caixa_detalhes">
-                                    <p>Detalhes</p>
-                                </div>
-                            </div>
 
-                            <div class="caixa_produto">
-                                <div class="caixa_imagem">
-                                
-                                </div>
-                                
-                                <div class="caixa_descricao">
-                                    <p>Nome:</p>
-                                    <p>Descrição:</p>
-                                    <p>Preço:</p>
-                                </div>
-                                
-                                <div class="caixa_detalhes">
-                                    <p>Detalhes</p>
-                                </div>
-                            </div>
-
-                            <div class="caixa_produto">
-                                <div class="caixa_imagem">
-                                
-                                </div>
-                                
-                                <div class="caixa_descricao">
-                                    <p>Nome:</p>
-                                    <p>Descrição:</p>
-                                    <p>Preço:</p>                                
-                                </div>
-                                
-                                <div class="caixa_detalhes">
-                                    <p>Detalhes</p>
-                                </div>
-                            </div>                    
-                        </div>
                     </div>
                 </section>
             </div>
