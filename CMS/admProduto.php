@@ -24,8 +24,9 @@
         $idSubCategoria = $_POST['cbSubCategoria'];
         $desc = $_POST['txtDescProduto'];
         $foto = $_POST['txtNomeFoto'];
+        $sinopse = $_POST['txtSinopseProduto'];
         
-        $sql = "insert into tbl_produto(nome, descricao, foto, idSubCategoria) values('".$nome."', '".$desc."', '".$foto."', ".$idSubCategoria.")";
+        $sql = "insert into tbl_produto(nome, descricao, foto, idSubCategoria, sinopse) values('".$nome."', '".$desc."', '".$foto."', ".$idSubCategoria.", '".$sinopse."')";
         
         //var_dump($sql);
         
@@ -216,8 +217,10 @@
                         ?>
                     </select>
                     <br><br>
-                    Descrição:<br>
-                    <textarea name="txtDescProduto" style="resize: none;">
+                    Descrição:<input type="text" name="txtDescProduto">
+                    <br><br>
+                    Sinopse:<br>
+                    <textarea name="txtSinopseProduto" style="resize: none;">
                     
                     </textarea>
                     
@@ -230,7 +233,7 @@
             
             <div class="seg_produtos">                
                 <?php 
-                    $sql = "select * from tbl_produto where status = 1";
+                    $sql = "select * from tbl_produto where idProduto = ".$_SESSION['idProduto'];
                 
                     //var_dump($sql);
                 

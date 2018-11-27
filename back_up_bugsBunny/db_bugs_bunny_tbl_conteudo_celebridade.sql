@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
+﻿-- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
 --
 -- Host: localhost    Database: db_bugs_bunny
 -- ------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `tbl_conteudo_celebridade` (
   PRIMARY KEY (`idConteudoCelebridade`),
   KEY `idCelebridade_idx` (`idCelebridade`),
   CONSTRAINT `idCelebridade` FOREIGN KEY (`idCelebridade`) REFERENCES `tbl_celebridade` (`idcelebridade`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

@@ -16,7 +16,7 @@
         
 //        $sql = "select p.nome, p.desc, p.foto, pp.preco from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.to_date is null and p.idProduto = ".$id." and pp.idProduto = ".$id;
         
-        $sql = "select p.nome, p.descricao, p.foto, pp.preco, pp.from_date from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.to_date is null and p.idProduto = ".$id." and pp.idProduto = ".$id; 
+        $sql = "select p.nome, p.sinopse, p.foto, pp.preco, pp.from_date from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.to_date is null and p.idProduto = ".$id." and pp.idProduto = ".$id; 
         
         
         $select = mysqli_query($conexao, $sql);
@@ -24,7 +24,7 @@
         
         $imgPromocao = $rsConsulta['foto'];
         $tituloPromocao = $rsConsulta['nome'];
-        $descPromocao = $rsConsulta['descricao'];
+        $sinopse = $rsConsulta['sinopse'];
         $precoAtual = $rsConsulta['preco'];
         
         $from_date_preco_atual = $rsConsulta['from_date'];
@@ -59,7 +59,9 @@
         $idProduto = $rsConsulta['idProduto'];
         
         
-        $sql = "select p.nome, p.descricao, p.foto, pp.preco, pp.from_date from tbl_produto as p, tbl_preco_produto as pp where p.idProduto = ".$idProduto." and pp.idProduto = ".$idProduto." and p.status = 1 and pp.to_date is null"; 
+        $sql = "select p.nome, p.sinopse, p.foto, pp.preco, pp.from_date from tbl_produto as p, tbl_preco_produto as pp where p.idProduto = ".$idProduto." and pp.idProduto = ".$idProduto." and p.status = 1 and pp.to_date is null"; 
+        
+        var_dump($sql);
         
         
         $select = mysqli_query($conexao, $sql);
@@ -68,7 +70,7 @@
         
         $imgPromocao = $rsConsulta['foto'];
         $tituloPromocao = $rsConsulta['nome'];
-        $descPromocao = $rsConsulta['descricao'];
+        $sinopse = $rsConsulta['sinopse'];
         $precoAtual = $rsConsulta['preco'];
         
         $from_date_preco_atual = $rsConsulta['from_date'];
@@ -236,7 +238,7 @@
                                 </div>
                                 
                                 <div class="caixa_promocoes_principal_detalhes_descricao">
-                                    <p><?php echo($descPromocao)?> </p>
+                                    <p><?php echo($sinopse)?> </p>
                                 </div>
                                 
                                 <div class="caixa_promocao_detalhes_preco_antigo">

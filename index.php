@@ -41,8 +41,10 @@
             $idSubCategoria = $_GET['idSubCategoria'];
             
             $sqlProdutos = "select p.idProduto, p.nome, p.foto, p.status, p.acesso, pp.idProduto, pp.preco, pp.to_date, pp.promocao from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and pp.idProduto = p.idProduto and pp.to_date is null and p.idSubCategoria = ".$idSubCategoria." order by rand() limit 0,6";
-            var_dump($sqlProdutos);
+            //var_dump($sqlProdutos);
         }
+        
+        
     }
 
 
@@ -78,6 +80,38 @@
 
         <script type="text/javascript" src="examples/connected-carousels/jcarousel.connected-carousels.js"></script>
         
+           
+        <script>
+            //código para abrir a modal
+            $(document).ready(function(){
+               
+                $(".abrirDetalhes").click(function(){
+                    $(".containerIndex").fadeIn(500);
+                })
+                
+            });
+            
+            
+            function modal(idProduto){
+                
+                
+                $.ajax({
+                    type: "GET",
+                    url: "modal_detalhes.php",
+                    data: {id:idProduto},
+                       
+                       
+                    success: function(dados){
+                        $('.containerIndex').html(dados);
+                    }
+                    
+                })
+                
+            }
+            
+            
+        </script>        
+        
         
         
         <meta charset="utf-8">
@@ -85,6 +119,12 @@
     
     <body>
         <header>
+
+            <div class="containerIndex">
+                <div class="modalIndex">
+
+                </div>
+            </div>            
             <div id="caixa_header">
                 <div id="caixa_header_central">
                     <div id="caixa_logo">
@@ -276,15 +316,12 @@
                                         Nome: <?php echo($rsConsulta['nome'])?>
                                     </p>
                                     <p>
-                                        Descrição:
-                                    </p>
-                                    <p>
                                         Preço: <?php echo($rsConsulta['preco'])?>
                                     </p>                                
                                 </div>
                                 
                                 <div class="caixa_detalhes">
-                                    <p>Detalhes</p>
+                                    <a class="abrirDetalhes" href="#" onclick="modal(<?php echo($rsConsulta['idProduto'])?>)"><p>Detalhes</p></a>
                                 </div>
                             </div>
                             

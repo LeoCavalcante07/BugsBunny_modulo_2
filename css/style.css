@@ -372,7 +372,27 @@ div{
 
 
 
+/*MODAL*/
+.containerIndex{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(000, 000, 000, 0.5);
+    display: none;
+    z-index: 999;
+    position: fixed;
+    
+}
 
+.modalIndex{
+    width: 1250px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+  
+/*    background-color: white;*/
+    
+}
 
 
 
@@ -1120,6 +1140,7 @@ div{
     margin-right: auto;   
     margin-bottom: 100px;
     border-radius: 30px;
+    
 }
 
 .caixa_promocoes_principal_imagem{
