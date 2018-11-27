@@ -549,9 +549,10 @@ a{
     margin-top: 100px;
     width: 500px;
     height: 600px;
-    margin-left: auto;
-    margin-right: auto;border: solid 1px black;
+    margin-left: 500px;;
+    border: solid 1px black;
     margin-bottom: 100px;
+    float: left;
 }
 
 .seg_produtos{
@@ -580,12 +581,44 @@ a{
 }
 
 
+.caixa_estatistica{
+    width: 64px;
+    height: 64px;
+    margin-left: 200px;
+    float: left;
+    
+}
+
+
+
 /*FIM ADM PRODUTOS*/
 
 
 
 
+/*ESTATISTICA*/
+.caixa_principal_estatistica{
+    width: 800px;
+    height: 500px;
+    border: solid 1px black;
+    margin-right: auto;
+    margin-left: auto;
+}
 
+.grafico{
+    width: 500px;
+    height: 350px;
+    background-color: aliceblue;
+    margin-right: auto;
+    margin-left: auto;   
+    margin-bottom: 50px;
+}
+
+.unidade_grafico{
+    height: 50px;
+    width: 100px;
+    background-color: black;
+}
 
 
 

@@ -229,11 +229,15 @@
                     <input type="submit" name="btnCadastrar" value="Cadastrar">
                 </form>
             </div>
+            
+            <div class="caixa_estatistica">
+                <a href="estatistica.php"><img src="imagens/grafico.png"></a>
+            </div>
 
             
             <div class="seg_produtos">                
                 <?php 
-                    $sql = "select * from tbl_produto where idProduto = ".$_SESSION['idProduto'];
+                    $sql = "select * from tbl_produto";
                 
                     //var_dump($sql);
                 
