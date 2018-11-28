@@ -44,7 +44,6 @@
             //var_dump($sqlProdutos);
         }
         
-        
     }
 
 
@@ -80,6 +79,10 @@
 
         <script type="text/javascript" src="examples/connected-carousels/jcarousel.connected-carousels.js"></script>
         
+        <script type="text/javascript" src="engine1/jquery.form.js"></script>
+        
+
+        
            
         <script>
             //código para abrir a modal
@@ -109,6 +112,13 @@
                 
             }
             
+/////////////////////////EEEEERRRRRROOOO  AAAQUIIIIIII////////////////////////////////////////////////            
+            function pesquisa(){
+                $('#formPesquisa').ajaxForm({
+                    target: '#txtPesquisa'
+                }).submit();
+            }
+/////////////////////////////////////////////////////////////////////////            
             
         </script>        
         
@@ -249,7 +259,17 @@
                     
                 </div>
                 <section>
+                    <div class="segPesquisa">
+                        <form id="formPesquisa" method="get" action="index.php">
+                            <input type="text" id="txtPesquisa" style="height: 25px; border: none;">
+                        </form>
+                        
+                        
+                        <img src="imagens/search.png" style="margin-top: 5px;" onclick="pesquisa()">
+                    </div>
+                    
                     <div id="caixa_itens">
+                        
                         <?php
 //                            $sql = "select c.nomeCategoria, sc.nomeSubCategoria from tbl_categoria as c, tbl_subcategoria as sc where c.status = 1 and sc.status = 1 and c.idCategoria = sc.idCategoria";
                                     
@@ -263,6 +283,7 @@
                             
                         ?>
                         <div class="item_1">
+                            
                             <?php 
                                 echo($rsConsulta['nomeCategoria']);
                                     

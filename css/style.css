@@ -381,6 +381,14 @@ div{
 
 
 
+.segPesquisa{
+    width: 200px;
+    height: 35px;
+    background-color: white;
+    margin-left: 1140px;    
+}
+
+
 /*MODAL*/
 .containerIndex{
     width: 100%;

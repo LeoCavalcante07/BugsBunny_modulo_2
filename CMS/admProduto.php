@@ -69,10 +69,31 @@
 
                     }).submit();                    
                    
-               });            
+               });   
+                
+                
+                $(".caixa_estatistica").click(function(){
+                    
+                    $.ajax({
+                        type:"GET" ,
+                        url:"modal_estatistica.php",
+                        
+                        success: function(dados){
+                            $(".modalEstatistica").html(dados);
+                        }
+                    });
+                    
+                   $(".containerEstatistica").fadeIn(500);
+                });
                 
    
             });
+            
+            
+            
+            
+            
+            
             
             
            
@@ -85,8 +106,8 @@
     
     <body>
         
-        <div class="container">
-            <div class="modal">
+        <div class="containerEstatistica">
+            <div class="modalEstatistica">
             
             </div>
         </div>
@@ -231,7 +252,7 @@
             </div>
             
             <div class="caixa_estatistica">
-                <a href="estatistica.php"><img src="imagens/grafico.png"></a>
+                <img src="imagens/grafico.png">
             </div>
 
             

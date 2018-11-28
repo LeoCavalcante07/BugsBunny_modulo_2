@@ -61,7 +61,7 @@
         
         $sql = "select p.nome, p.sinopse, p.foto, pp.preco, pp.from_date from tbl_produto as p, tbl_preco_produto as pp where p.idProduto = ".$idProduto." and pp.idProduto = ".$idProduto." and p.status = 1 and pp.to_date is null"; 
         
-        var_dump($sql);
+        //var_dump($sql);
         
         
         $select = mysqli_query($conexao, $sql);
@@ -79,7 +79,7 @@
         
         
         
-        var_dump($sql2);
+       // var_dump($sql2);
         
         $select2 = mysqli_query($conexao, $sql2);
         

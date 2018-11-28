@@ -590,6 +590,34 @@ a{
 }
 
 
+.containerEstatistica{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: fixed;
+    z-index: 999;
+    color: white;
+}
+
+.modalEstatistica{
+    margin-top: 250px;
+    width: 500px;
+    height: 350px;
+    margin-right: auto;
+    margin-left: auto;   
+    background-color: black;
+}
+
+.imagemSair{
+    background-image: url(../imagens/sair.png);
+    width: 56px;
+    height: 56px;
+    margin-left: 440px;  
+    margin-top: -290px;
+}
+
+
 
 /*FIM ADM PRODUTOS*/
 
@@ -597,28 +625,32 @@ a{
 
 
 /*ESTATISTICA*/
-.caixa_principal_estatistica{
-    width: 800px;
-    height: 500px;
-    border: solid 1px black;
-    margin-right: auto;
-    margin-left: auto;
-}
-
 .grafico{
     width: 500px;
     height: 350px;
-    background-color: aliceblue;
+    border: solid 1px black;
     margin-right: auto;
     margin-left: auto;   
     margin-bottom: 50px;
 }
 
-.unidade_grafico{
+.limiteGrafico{
+    width: 300px;
     height: 50px;
-    width: 100px;
-    background-color: black;
+    
 }
+
+.unidade_grafico{
+    
+    height: 40px;
+/*    width: 100px;*/
+    background-color: darkgray;
+    margin-bottom: 20px;
+    color: white;
+    
+}
+
+
 
 
 
