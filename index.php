@@ -1,5 +1,5 @@
 <?php
-
+    
     session_start();
 
     include_once('conexao.php');
@@ -114,9 +114,7 @@
             
 /////////////////////////EEEEERRRRRROOOO  AAAQUIIIIIII////////////////////////////////////////////////            
             function pesquisa(){
-                $('#formPesquisa').ajaxForm({
-                    target: '#txtPesquisa'
-                }).submit();
+                document.getElementById('formPesquisa').submit();
             }
 /////////////////////////////////////////////////////////////////////////            
             
@@ -298,7 +296,9 @@
                                 <ul>
                                     <li>
                                         <a href="index.php?modo=subcategoria&idSubCategoria=<?php echo($rsConsulta2['idSubCategoria'])?>" style="text-decoration: none;">
-                                         <?php echo($rsConsulta2['nomeSubCategoria'])?>
+                                         <?php
+                                        $rsConsulta2['nomeSubCategoria'] = str_replace(" ","&nbsp;",$rsConsulta2['nomeSubCategoria']);
+                                echo($rsConsulta2['nomeSubCategoria'])?>
                                         </a>
                                         
                                     </li>
