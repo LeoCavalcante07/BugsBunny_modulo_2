@@ -35,6 +35,17 @@
     }
 
 
+    if(isset($_GET['txtPesquisa'])){
+        $pesquisa = $_GET['txtPesquisa'];
+        
+        $sqlProdutos = "select p.idProduto, p.nome, p.foto, p.status, p.acesso, pp.idProduto, pp.preco, 
+        pp.to_date, pp.promocao from tbl_produto as p, tbl_preco_produto as pp where p.status = 1 and p.idProduto = pp.idProduto and pp.to_date is null and (p.nome like '%".$pesquisa."%' or p.sinopse like '%".$pesquisa."%') limit 6;";
+        
+        //var_dump($sqlProdutos);
+
+    }
+
+
     if(isset($_GET['modo'])){
         $modo = $_GET['modo'];
         if($modo == "subcategoria"){
@@ -259,7 +270,7 @@
                 <section>
                     <div class="segPesquisa">
                         <form id="formPesquisa" method="get" action="index.php">
-                            <input type="text" id="txtPesquisa" style="height: 25px; border: none;">
+                            <input type="text" name="txtPesquisa" style="height: 25px; border: none;">
                         </form>
                         
                         
