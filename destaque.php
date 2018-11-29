@@ -86,37 +86,24 @@
                     </div>
 
                     <div id="caixa_login">
-                        <div class="caixa_seg_login_label">
-                            <div class="caixa_login_label" style="margin-right: 30px;">
-                                <p>Usuário:</p>
-                            </div>
+                        <form action="index.php" method="post">
+                            <p style="margin-bottom: 10px;">Usuário: <input type="text" name="txtUsuario"> </p>
 
-                            <div class="caixa_login_label">
-                                <p>Senha:</p>
-                            </div>                          
-                        </div>
-                        
-                        <div class="caixa_seg_login_text">
-                            <div class="caixa_login_text">
-                                <input type="text" name="txtUsuario">                                
-                            </div>
+                            <p style="margin-bottom: 5px;">Senha: <input type="password" name="txtSenha"></p>
+
                             
-                            <div class="caixa_login_text">
-                                <input type="password" name="txtSenha">                           
-                            </div>                            
-                        </div>
-                        
-                        <a href="CMS/index.php">
-                            <div class="caixa_botao">
-                                <input type="submit" name="btnEntrar"  class="btnEntrar" value="Entrar">    
-                            </div>
-                      </a>
+                                                
+                            <input type="submit" name="btnEntrar"  class="btnEntrar" value="Entrar">                                                           
+                        </form>
+
                     </div>   
+                    
+                    
                     
                 </div>
                 
                 
-            </div>
+            </div>  
             
             
         </header>
@@ -153,7 +140,7 @@
                             </div>
 
                             <div class="caixa_destaque_section1_texto">
-                                <?php echo($rsDestaque['texto']);?>
+                                <p style="font-size: 1em;"><?php echo($rsDestaque['texto']);?></p>
                             </div>
 
                             <div class="caixa_destaque_section1_img">
@@ -202,24 +189,27 @@
 
                 
             </div>
+             
             
             <div class="caixa_anuncio">
                 <div class="anuncio">
                     <img src="imagens/facebook.png" alt="facebook">
                 </div>
-                
+
                 <div class="anuncio">
                     <img src="imagens/linkedin.png" alt="linkedin">
                 </div>
-                
+
                 <div class="anuncio">
                     <img src="imagens/twitter.png" alt="twitter">
                 </div>                
-                
-                
-            </div> 
+
+
+            </div>              
             
         </div>        
+        
+      
         
         <footer>
             <div id="caixa_footer">

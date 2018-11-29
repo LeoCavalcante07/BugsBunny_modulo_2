@@ -45,158 +45,675 @@ div{
     padding-top: 0;
 }
 
-#caixa_header{    
-    height: 155px;
-    width: 100%;
-    position: fixed;
-/*    background-color: black;*/
-    background-image: linear-gradient(black, #282828, black); 
+
+
+
+
+/*DESKTOP*/
+@media screen and (min-width: 1200px){
+    #caixa_header{
+        height: 140px;
+        width: 100%;
+        position: fixed;
+        background-image: linear-gradient(black, #282828, black); 
+        color: white;
+        z-index: 998;        
+    }
+
     
-    color: white;
-    z-index: 998;
+    /*CAIXA QUE FICA ATRAS DO HEADER P/ CONSEGUIR EMPURRAR OS ELEMNTOS DE BAIXO*/
+    #caixa_especial{
+        height: 141px;
+        width: 100%;    
+    }    
     
-}
+    #caixa_header_central{
+        height: inherit;
+        width: 1300px;  
+        margin-left: auto;
+        margin-right: auto;   
+/*        background-color: green;*/
+    }
 
-/*CAIXA QUE FICA ATRAS DO HEADER P/ CONSEGUIR EMPURRAR OS ELEMNTOS DE BAIXO*/
-#caixa_especial{
-    height: 156px;
-    width: 100%;    
-}
+    #caixa_logo{
+        height: 130px;
+        width: 150px;
 
-#caixa_header_central{
-    height: 100%;
-    width: 1800px;  
-    margin-left: auto;
-    margin-right: auto;            
-}
+        margin-top: 10px;
+        margin-left: 0px;
+        float: left;
+        background-image: url(../imagens/logo1.png);
+        background-size: cover;
 
-#caixa_logo{
-    height: 140px;
-    width: 150px;
+    }
+
+    #caixa_menu{
+        height: 80px;
+        width: 850px;    
+        margin-top: 45px;
+        margin-left: 50px;
+        float: left;   
+        margin-right: 0px;
+    }
+
+    .caixa_optMenu{
+        height: 30px;
+        width: auto;
+        min-width: 10px;
+        overflow: hidden;
+        float: left;
+        padding-bottom: 5px;     
+        margin-right: 50px;
+/*        background-color: yellow;*/
+    }
+
+    .caixa_optMenu:hover{    
+        border-bottom: solid 1px white;   
+        transition: 0.5s;
+        cursor: pointer;
+
+    }
+
+
+
+    .caixa_optMenu p, .caixa_optMenu a:link{
+        font-size: 1em;
+        text-align: center;  
+        color: white;
+        font-family: 'Permanent Marker', cursive;
+        text-decoration: none;
+    }
+
+
+
+    #caixa_login{
+        height: 100px;
+        width: 250px;
+        margin-top: 35px;
+        float: left; 
+
+    }
+
+    #caixa_login p{
+        font-size: 16px;
+    }
+
+
+    .btnEntrar{
+        height: 20px;
+        width: 50px;
+        font-size: 14px;
+        background-image: linear-gradient(black, #282828, black); 
+        border: solid 0.5px white;
+        border-color: white;
+        margin-left: 190px;
+        color: white;
+    }
+
+    .btnEntrar:hover{
+        border-color: black;
+        border: solid 0.5px green;
+        cursor: pointer;
+    }   
     
-    margin-top: 10px;
-    margin-left: 100px;
-    float: left;
-    background-image: url(../imagens/logo1.png);
-    background-size: cover;
-        
-}
 
-#caixa_menu{
-    height: 80px;
-    width: 900px;    
-    margin-top: 45px;
-    margin-left: 150px;
-    float: left;   
-    margin-right: 50px;
-}
-
-.caixa_optMenu{
-    height: 30px;
-    width: auto;
-    float: left;
-    padding-bottom: 5px;     
-    margin-right: 50px;
-}
-
-.caixa_optMenu:hover{    
-    border-bottom: solid 1px white;   
-    transition: 0.5s;
-    cursor: pointer;
     
-}
-
-
-
-.caixa_optMenu p, .caixa_optMenu a:link{
-    font-size: 18px;
-    text-align: center;  
-    color: white;
-    font-family: 'Permanent Marker', cursive;
-    text-decoration: none;
-}
-
-
-
-#caixa_login{
-    height: 80px;
-    width: 450px;
-    margin-top: 10px;
-    float: left; 
-    
-}
-
-#caixa_login p{
-    font-size: 20px;
-}
-
-.caixa_seg_login_label{
-    height: 50%;
-    width: 80%;
-    float: left;  
-    
-}
-
-.caixa_login_label{
-    height: 100%;
-    width: 40%;    
-    float: left;    
-    
-}
-
-.caixa_seg_login_text{
-    height: 40%;
-    width: 80%;  
-    margin-top: 10px;
-    float: left;   
-}
-
-.caixa_login_text{
-    height: 100%;
-    width: 50%;
-    float: left;    
-}
-
-.caixa_botao{
-    
-    margin-left: 10px;
-    height: 100px;
-    width: 50px;
-    float: left;
-}
-
-.btnEntrar{
-    height: 30px;
-    width: 80px;
-    font-size: 20px;
-    background-image: linear-gradient(black, #282828, black); 
-    border: solid 0.5px white;
-    border-color: white;
-    color: white;
-}
-
-.btnEntrar:hover{
-    border-color: black;
-    border: solid 0.5px green;
-    cursor: pointer;
-}
-
 /*FIM DO HEADER*/
-
-.caixa_global{
-    width: 1410px;
-    min-height: 800px;
-    height: auto;    
-    box-shadow:0px 12px 90px black;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    background-image: linear-gradient(black, #7c7e7f, black); 
-/*    background-image: linear-gradient(black, #282828, black);*/
     
+    
+
+    .caixa_global{
+        width: 1000px;
+        min-height: 800px;
+        height: auto;    
+        box-shadow:0px 12px 90px black;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        
+
+    /*    background-image: linear-gradient(black, #282828, black);*/
+
+
+
+    }  
+    
+    
+/*    REDES SOCIAIS*/
+    .caixa_anuncio{
+        float: left;
+        height: 340px;
+        width: 300px;            
+        margin-top: 100px;
+        margin-left: 920px;
+        position: fixed;
+    }
+
+    .anuncio{
+        width: 100px;
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;  
+        margin-bottom: 10px;
+    }    
+    
+    .anuncio img{
+        width: 128px;
+        height: 100px;        
+    }
+    
+    
+    
+    
+    
+    
+    /*DESTAQUE*/
+
+    .caixa_destaque_principal{
+        height: auto;
+        min-height: 900px;
+        overflow: hidden;
+        width: inherit;
+        background-image: linear-gradient(black, #7c7e7f, black);
+        float: left;
+    }
+
+
+    .caixa_destaque_titulo{
+        height: 60px;
+        width: 500px;
+
+        color: white;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;    
+
+    }
+
+    .caixa_destaque_section1{
+        height: auto;
+        min-height: 200px;  
+        overflow: hidden;
+        width: 750px;    
+        margin-left: auto;
+        margin-right: auto; 
+        margin-bottom: 100px;
+/*        background-color: red;*/
+
+    }
+
+
+
+    .caixa_destaque_section1_titulo{
+        height: 40px;
+        width: auto;
+        font-family: cursive;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+
+    }
+
+    .caixa_destaque_section1_titulo h2{
+        color: white;
+    }
+
+
+
+    .caixa_destaque_section1_texto{
+        height: auto;
+        min-height: 100px;
+        width: 300px;        
+        float: left;
+    }
+
+    .caixa_destaque_section1_img{
+        height: 200px;
+        width: 350px;    
+        margin-left: 60px;
+        float: left;    
+    }
+
+    .caixa_destaque_section1_img img{
+        height: 250px;
+        width: 400px;
+    }
+
+    
+    .caixa_destaque_section2{        
+        height: auto;
+        min-height: 200px;  
+        overflow: hidden;
+        width: 850px;    
+        margin-left: auto;
+        margin-right: auto; 
+        margin-bottom: 100px;        
+
+
+
+    }
+
+
+
+    .caixa_destaque_section2_titulo{
+        height: 40px;
+        width: auto;
+        font-family: cursive;
+
+        font-size: 18px;
+        margin-bottom: 50px;
+
+    }
+    .caixa_destaque_section2_titulo h2{
+        color: white;
+    }
+
+
+    .caixa_destaque_section2_img{
+        height: 200px;
+        width: 350px;    
+        float: left;    
+    }
+
+    .caixa_destaque_section2_texto{
+        height: 200px;
+        width: 350px;   
+        margin-left: 60px;
+        float: left;
+    }
+
+
+
+
+    .caixa_destaque_section1, .caixa_destaque_section2, .caixa_destaque_section3 p{
+        color: white;
+        font-size: 24px;
+    }    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/*FOOTER*/
+    #caixa_footer{
+        width: 100%;
+        height: 150px;    
+        background-color: black;
+
+
+    }
+
+    .caixa_footer_central{
+        width: 1000px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+    .caixa_footer_cima{
+        height: 50px;
+        width: 100%;
+        padding: 20px;
+
+
+
+
+    }
+
+    .caixa_footer_baixo{
+        height: 50px;
+        width: 100%;    
+
+    }
+
+
+
+    .caixa_footer_cima, .caixa_footer_baixo p{
+        font-size: 25px;
+        color: white;
+        text-align: center;
+
+    }
+
+
+
+
+/*FIM DO FOOTER*/    
     
     
 }
+
+
+
+/*MOBILE*/
+@media screen and (max-device-width: 640px){
+    
+    #caixa_header{
+        height: 140px;
+        width: 100%;
+        position: fixed;
+        background-image: linear-gradient(black, #282828, black); 
+        color: white;
+        z-index: 998;        
+    }
+
+    
+    /*CAIXA QUE FICA ATRAS DO HEADER P/ CONSEGUIR EMPURRAR OS ELEMNTOS DE BAIXO*/
+    #caixa_especial{
+        height: 141px;
+        width: 100%;    
+    }    
+    
+    #caixa_header_central{
+        height: inherit;
+        width: inherit;  
+        margin-left: auto;
+        margin-right: auto;   
+/*        background-color: green;*/
+    }
+
+    #caixa_logo{
+        height: 130px;
+        width: 150px;
+        margin-top: 10px;
+        background-image: url(../imagens/logo1.png);
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;        
+
+    }
+
+    #caixa_menu{
+        display: none;
+    }
+
+    
+    .caixa_optMenu{
+        display: none;
+    }
+
+
+
+
+    .caixa_optMenu p, .caixa_optMenu a:link{
+        display: none;
+    }
+
+
+
+    #caixa_login{
+        display: none;
+
+    }
+
+    .btnEntrar{
+        display: none;
+    }
+
+    
+
+    
+/*FIM DO HEADER*/
+    
+    
+
+    .caixa_global{
+        width: 100%;
+        min-height: 800px;
+        height: auto;    
+        box-shadow:0px 12px 90px black;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        
+
+    /*    background-image: linear-gradient(black, #282828, black);*/
+
+
+
+    }  
+    
+    
+/*    REDES SOCIAIS*/
+    .caixa_anuncio{
+        display: none;  
+    }
+
+
+    /*DESTAQUE*/
+
+    .caixa_destaque_principal{
+        height: auto;
+        min-height: 900px;
+        overflow: hidden;
+        width: inherit;
+        background-image: linear-gradient(black, #7c7e7f, black);
+    }
+
+
+    .caixa_destaque_titulo{
+        height: 60px;
+        width: 500px;
+
+        color: white;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;    
+
+    }
+
+    .caixa_destaque_section1{
+        height: auto;
+        min-height: 200px;  
+        overflow: hidden;
+        width: 750px;    
+        margin-left: auto;
+        margin-right: auto; 
+        margin-bottom: 100px;
+/*        background-color: red;*/
+
+    }
+
+
+
+    .caixa_destaque_section1_titulo{
+        height: 40px;
+        width: auto;
+        font-family: cursive;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+
+    }
+
+    .caixa_destaque_section1_titulo h2{
+        color: white;
+    }
+
+
+
+    .caixa_destaque_section1_texto{
+        height: auto;
+        min-height: 100px;
+        width: 300px;        
+        float: left;
+    }
+
+    .caixa_destaque_section1_img{
+        height: 200px;
+        width: 350px;    
+        margin-left: 60px;
+        float: left;    
+    }
+
+    .caixa_destaque_section1_img img{
+        height: 250px;
+        width: 400px;
+    }
+
+    
+    .caixa_destaque_section2{        
+        height: auto;
+        min-height: 200px;  
+        overflow: hidden;
+        width: 850px;    
+        margin-left: auto;
+        margin-right: auto; 
+        margin-bottom: 100px;        
+
+
+
+    }
+
+
+
+    .caixa_destaque_section2_titulo{
+        height: 40px;
+        width: auto;
+        font-family: cursive;
+
+        font-size: 18px;
+        margin-bottom: 50px;
+
+    }
+    .caixa_destaque_section2_titulo h2{
+        color: white;
+    }
+
+
+    .caixa_destaque_section2_img{
+        height: 200px;
+        width: 350px;    
+        float: left;    
+    }
+
+    .caixa_destaque_section2_texto{
+        height: 200px;
+        width: 350px;   
+        margin-left: 60px;
+        float: left;
+    }
+
+
+
+
+    .caixa_destaque_section1, .caixa_destaque_section2, .caixa_destaque_section3 p{
+        color: white;
+        font-size: 24px;
+    }    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/*FOOTER*/
+    #caixa_footer{
+        width: 100%;
+        height: 150px;    
+        background-color: black;
+
+
+    }
+
+    .caixa_footer_central{
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+    .caixa_footer_cima{
+        height: 50px;
+        width: 100%;
+        padding: 20px;
+
+
+
+
+    }
+
+    .caixa_footer_baixo{
+        height: 50px;
+        width: 100%;    
+
+    }
+
+
+
+    .caixa_footer_cima, .caixa_footer_baixo p{
+        font-size: 25px;
+        color: white;
+        text-align: center;
+
+    }
+
+
+
+
+/*FIM DO FOOTER*/      
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #caixa_principal{
     height: auto;
@@ -314,22 +831,7 @@ div{
 
 
 
-.caixa_anuncio{
-    float: left;
-    height: 600px;
-    width: 300px;            
-    margin-top: 150px;
-    margin-left: 1330px;
-    position: fixed;
-}
 
-.anuncio{
-    width: 128px;
-    height: 128px;
-    margin-left: auto;
-    margin-right: auto;  
-    margin-bottom: 10px;
-}
 
 .caixa_imagem{
     width: 50%;
@@ -958,171 +1460,6 @@ div{
 
 
 
-/*DESTAQUE*/
-
-.caixa_destaque_principal{
-    height: auto;
-    min-height: 1200px;
-    width: 1410px;
-    
-    float: left;
-}
-
-
-.caixa_destaque_titulo{
-    height: 60px;
-    width: 500px;
-    
-    color: white;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;    
-    
-}
-
-.caixa_destaque_section1{
-    height: 350px;
-/*    min-height: 200px;  */
-    width: 850px;    
-    margin-left: auto;
-    margin-right: auto; 
-    margin-bottom: 100px;
-    
-}
-
-
-
-.caixa_destaque_section1_titulo{
-    height: 40px;
-    width: auto;
-    font-family: cursive;
-    font-size: 18px;
-    
-    margin-bottom: 50px;
-    
-}
-
-.caixa_destaque_section1_titulo h2{
-    color: white;
-}
-
-
-
-.caixa_destaque_section1_texto{
-    height: auto;
-    min-height: 100px;
-    width: 350px;        
-    float: left;
-}
-
-.caixa_destaque_section1_img{
-    height: 200px;
-    width: 350px;    
-    margin-left: 60px;
-    float: left;    
-}
-
-.caixa_destaque_section1_img img{
-    height: 250px;
-    width: 400px;
-}
-
-
-
-.caixa_destaque_section2{
-    height: 350px;
-    width: 850px;    
-    margin-left: auto;
-    margin-right: auto;  
-    
-    
-    
-}
-
-
-
-.caixa_destaque_section2_titulo{
-    height: 40px;
-    width: auto;
-    font-family: cursive;
-
-    font-size: 18px;
-    margin-bottom: 50px;
-    
-}
-.caixa_destaque_section2_titulo h2{
-    color: white;
-}
-
-
-.caixa_destaque_section2_img{
-    height: 200px;
-    width: 350px;    
-    float: left;    
-}
-
-.caixa_destaque_section2_texto{
-    height: 200px;
-    width: 350px;   
-    margin-left: 60px;
-    float: left;
-}
-
-
-
-
-
-
-/*
-.caixa_destaque_section3{
-    height: 250px;
-    width: 800px;    
-    margin-left: auto;
-    margin-right: auto; 
-    
-}
-
-
-
-.caixa_destaque_section3_titulo{
-    height: 40px;
-    width: 100px;
-    font-family: cursive;
-    margin-bottom: 50px;
-    font-size: 18px;
-    
-}
-
-.caixa_destaque_section3_titulo h2{
-    color: white;
-}
-
-
-
-.caixa_destaque_section3_texto{
-    height: 200px;
-    width: 350px;        
-    float: left;
-}
-
-.caixa_destaque_section3_img{
-    height: 200px;
-    width: 350px;    
-    background-image: url(../imagens/destaque2.jpg);
-    margin-left: 60px;
-    float: left;    
-}
-*/
-
-
-.caixa_destaque_section1, .caixa_destaque_section2, .caixa_destaque_section3 p{
-    color: white;
-    font-size: 24px;
-}
-
-
-
-
 
 /*PROMOÇÕES*/
 
@@ -1347,60 +1684,5 @@ div{
 }
 
 
-
-
-
-
-
-
-
-
-/*FOOTER*/
-#caixa_footer{
-    width: 100%;
-    height: 206px;    
-    background-color: black;
-    
-    
-}
-
-.caixa_footer_central{
-    width: 1800px;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    
-    
-}
-
-.caixa_footer_cima{
-    height: 50px;
-    width: 100%;
-    padding: 20px;
-    
-    
-    
-
-}
-
-.caixa_footer_baixo{
-    height: 50px;
-    width: 100%;    
-     
-}
-
-
-
-.caixa_footer_cima, .caixa_footer_baixo p{
-    font-size: 25px;
-    color: white;
-    text-align: center;
-    
-}
-
-
-
-
-/*FIM DO FOOTER*/
 
 

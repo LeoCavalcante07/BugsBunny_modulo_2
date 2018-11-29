@@ -122,12 +122,7 @@
                 })
                 
             }
-            
-/////////////////////////EEEEERRRRRROOOO  AAAQUIIIIIII////////////////////////////////////////////////            
-            function pesquisa(){
-                document.getElementById('formPesquisa').submit();
-            }
-/////////////////////////////////////////////////////////////////////////            
+                        
             
         </script>        
         
@@ -143,7 +138,8 @@
                 <div class="modalIndex">
 
                 </div>
-            </div>            
+            </div>  
+            
             <div id="caixa_header">
                 <div id="caixa_header_central">
                     <div id="caixa_logo">
@@ -197,39 +193,18 @@
 
                     <div id="caixa_login">
                         <form action="index.php" method="post">
-                            <div class="caixa_seg_login_label">
-                                <div class="caixa_login_label" style="margin-right: 30px;">
-                                    <p>Usuário:</p>
-                                </div>
+                            <p style="margin-bottom: 10px;">Usuário: <input type="text" name="txtUsuario"> </p>
 
-                                <div class="caixa_login_label">
-                                    <p>Senha:</p>
-                                </div>                          
-                            </div>
+                            <p style="margin-bottom: 5px;">Senha: <input type="password" name="txtSenha"></p>
 
-                            <div class="caixa_seg_login_text">
-                                <div class="caixa_login_text">
-                                    <input type="text" name="txtUsuario">                                
-                                </div>
-
-                                <div class="caixa_login_text">
-                                    <input type="password" name="txtSenha">                           
-                                </div>   
-                                
-                                <p style="color: red; margin-top: 5px;"><?php echo($noUser)?></p>
-                                
-                                
-                            </div>
-
-                            
-                            <a href="CMS/index.php">
-                                <div class="caixa_botao">
-                                    <input type="submit" name="btnEntrar"  class="btnEntrar" value="Entrar">    
-                                </div>
-                          </a>                        
+                            <p style="color: red; margin-top: 5px;"> <?php echo($noUser)?></p>
+                                                
+                            <input type="submit" name="btnEntrar"  class="btnEntrar" value="Entrar">                                                           
                         </form>
 
                     </div>   
+                    
+                    
                     
                 </div>
                 
