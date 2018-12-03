@@ -36,10 +36,26 @@
         <header>
             <div id="caixa_header">
                 <div id="caixa_header_central">
+                    <div class="iconeMenu">
+                    
+                    </div>
+                    
+                    <div class="menuMobile">
+<!--
+                        <ul>
+                            <li>Home</li>
+                            <li>Home</li>
+                            <li>Home</li>
+                        </ul>
+-->
+                    </div>
+                    
                     <div id="caixa_logo">
                        
                     </div>
 
+                    
+                    
                     <div id="caixa_menu">
                        <a href="index.php"> 
                            <div class="caixa_optMenu">
@@ -140,7 +156,7 @@
                             </div>
 
                             <div class="caixa_destaque_section1_texto">
-                                <p style="font-size: 1em;"><?php echo($rsDestaque['texto']);?></p>
+                                <p style="font-size: 0.8em;"><?php echo($rsDestaque['texto']);?></p>
                             </div>
 
                             <div class="caixa_destaque_section1_img">
@@ -169,7 +185,7 @@
                         </div>
                         
                         <div class="caixa_destaque_section2_texto">
-                            <p>
+                            <p style="font-size: 0.8em;">
                                 <?php echo($rsDestaque['texto']);?>
                             </p>
                         </div>                        
