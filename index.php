@@ -122,6 +122,26 @@
                 })
                 
             }
+            
+            
+            
+            
+            
+     
+            
+            function clickMenu(){                
+
+                document.getElementById("menuMobile").style.width = "300px";
+
+                document.getElementById("menuMobile").style.transition = "1s";
+
+            }
+            
+            function pesquisa(){
+                document.getElementById('formPesquisa').submit();
+            }
+            
+          
                         
             
         </script>        
@@ -132,20 +152,39 @@
     </head>
     
     <body>
-        <header>
 
+            
+        <header>
+            
             <div class="containerIndex">
                 <div class="modalIndex">
 
                 </div>
-            </div>  
-            
+            </div>              
             <div id="caixa_header">
                 <div id="caixa_header_central">
+                    <div class="iconeMenu" onclick="clickMenu()">
+                    
+                    </div>
+                    
+                    <div class="menuMobile" id="menuMobile">
+                        <ul>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="destaque.php">Destaque</a></li>
+                            <li><a href="sobre.php">Sobre</a></li>
+                            <li><a href="promocoes.php">Promoção</a></li>
+                            <li><a href="bancas.php">Bancas</a></li>
+                            <li><a href="celebridade.php">Celebridades</a></li>
+                            <li><a href="faleConosco.php">Fale Conosco</a></li>
+                        </ul>
+                    </div>
+                    
                     <div id="caixa_logo">
                        
                     </div>
 
+                    
+                    
                     <div id="caixa_menu">
                        <a href="index.php"> 
                            <div class="caixa_optMenu">
@@ -197,7 +236,7 @@
 
                             <p style="margin-bottom: 5px;">Senha: <input type="password" name="txtSenha"></p>
 
-                            <p style="color: red; margin-top: 5px;"> <?php echo($noUser)?></p>
+                            
                                                 
                             <input type="submit" name="btnEntrar"  class="btnEntrar" value="Entrar">                                                           
                         </form>
@@ -209,48 +248,24 @@
                 </div>
                 
                 
-            </div>
+            </div>  
             
             
         </header>
+            
+            
         
         <div class="caixa_global">
             <div id="caixa_especial"></div>
         
     <!--        -------------Conteudo---------------->
             <div id="caixa_principal">
-                <div id="secao_slider">
-                    
-                    
-                    <!-- Start WOWSlider.com BODY section -->
-                    <div id="wowslider-container1">
-                    <div class="ws_images"><ul>
-                            <li><img src="data1/images/bg.png" alt="bg" title="Animes" id="wows1_0"/></li>
-                            <li><a href="http://wowslider.net"><img src="data1/images/bg5.png" alt="jquery image carousel" title="Revistas Cientificas" id="wows1_1"/></a></li>
-                            <li><img src="data1/images/slide2.jpg" alt="slide2" title="Livros" id="wows1_2"/></li>
-                        </ul></div>
-                        <div class="ws_bullets"><div>
-                            <a href="#" title="bg"><span><img src="data1/tooltips/bg.png" alt="bg"/>1</span></a>
-                            <a href="#" title="bg5"><span><img src="data1/tooltips/bg5.png" alt="bg5"/>2</span></a>
-                            <a href="#" title="slide2"><span><img src="data1/tooltips/slide2.jpg" alt="slide2"/>3</span></a>
-                        </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">bootstrap slideshow</a> by WOWSlider.com v8.8</div>
-                    <div class="ws_shadow"></div>
-                    </div>	
-                    <script type="text/javascript" src="engine1/wowslider.js"></script>
-                    <script type="text/javascript" src="engine1/script.js"></script>
-                    <!-- End WOWSlider.com BODY section -->  
-                    
+                
+                <div id="imgHome">
                     
                 </div>
+                
                 <section>
-                    <div class="segPesquisa">
-                        <form id="formPesquisa" method="get" action="index.php">
-                            <input type="text" name="txtPesquisa" style="height: 25px; border: none;">
-                        </form>
-                        
-                        
-                        <img src="imagens/search.png" style="margin-top: 5px;" onclick="pesquisa()">
-                    </div>
                     
                     <div id="caixa_itens">
                         
@@ -303,43 +318,53 @@
                         ?>
                     </div>
 
-                    <div id="caixa_conteudo">
-                        <div id="caixa_conteudo_seg">
-                            <?php
-                                $sql = $sqlProdutos;
-                            
-                                $select = mysqli_query($conexao, $sql);
-                            
-                                while($rsConsulta = mysqli_fetch_array($select)){
-                            ?>
-                            <div class="caixa_produto">
-                                <div class="caixa_imagem">
-                                    <img src="CMS/<?php echo($rsConsulta['foto'])?>">
-                                    
-                                </div>
-                                
-                                <div class="caixa_descricao">
-                                    <p>
-                                        Nome: <?php echo($rsConsulta['nome'])?>
-                                    </p>
-                                    <p>
-                                        Preço: <?php echo($rsConsulta['preco'])?>
-                                    </p>                                
-                                </div>
-                                
-                                <div class="caixa_detalhes">
-                                    <a class="abrirDetalhes" href="#" onclick="modal(<?php echo($rsConsulta['idProduto'])?>)"><p>Detalhes</p></a>
-                                </div>
+                  
+                    <div id="caixa_conteudo_seg">
+                        
+                        <div class="segPesquisa">
+                            <form id="formPesquisa" method="get" action="index.php">
+                                <input type="text" name="txtPesquisa" style="height: 20px; width: 100px; float: left; border: none;">
+                            </form>
+
+
+                            <img src="imagens/search.png" style="float: left; margin-left: 10px; margin-top: 2px;" onclick="pesquisa()">
+                        </div>                        
+                        
+                        <?php
+                            $sql = $sqlProdutos;
+
+                            $select = mysqli_query($conexao, $sql);
+
+                            while($rsConsulta = mysqli_fetch_array($select)){
+                        ?>
+                        <div class="caixa_produto">
+                            <div class="caixa_imagem">
+                                <img src="CMS/<?php echo($rsConsulta['foto'])?>">
+
                             </div>
-                            
-                            <?php
-                                }
-                            ?>
-                     
+
+                            <div class="caixa_descricao">
+                                <p>
+                                    Nome: <?php echo($rsConsulta['nome'])?>
+                                </p>
+                                <p>
+                                    Preço: <?php echo($rsConsulta['preco'])?>
+                                </p>                                
+                            </div>
+
+                            <div class="caixa_detalhes">
+                                <a class="abrirDetalhes" href="#" onclick="modal(<?php echo($rsConsulta['idProduto'])?>)"><p>Detalhes</p></a>
+                            </div>
                         </div>
 
+                        <?php
+                            }
+                        ?>
 
                     </div>
+
+
+                  
                 </section>
             </div>
 

@@ -131,6 +131,9 @@ div{
     }
 
 
+    .menuMobile{
+        display: none;
+    }
 
     #caixa_login{
         height: 100px;
@@ -176,12 +179,7 @@ div{
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
-        
-
-    /*    background-image: linear-gradient(black, #282828, black);*/
-
-
-
+        background-image: linear-gradient(black, #7c7e7f, black);
     }  
     
     
@@ -219,8 +217,7 @@ div{
         height: auto;
         min-height: 900px;
         overflow: hidden;
-        width: inherit;
-        background-image: linear-gradient(black, #7c7e7f, black);
+        width: inherit;        
         float: left;
     }
 
@@ -341,6 +338,204 @@ div{
         color: white;
         font-size: 24px;
     }    
+    
+    
+ ////////////////*HOME*////////////////////////////////   
+    
+    
+
+    
+#caixa_principal{
+    height: auto;
+    min-height: 400px;
+    overflow: hidden;
+    width: inherit;    
+    float: left;
+}
+
+#secao_slider{
+    height: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#caixa_itens{
+    height: 500px;
+    width: 140px;
+    border: solid 1px black;
+    float: left;
+    font-size: 30px;
+    margin-top: -90px;
+    margin-left: 15px;
+/*    border-radius: 32px;*/
+    
+}
+
+.item_1{
+    padding: 15px;
+    height: 60px;
+    width: 112px;
+    font-size: 0.8em;
+    color: white;
+    border-bottom: solid 1px black;
+}
+
+.subMenu{
+    width: 0px;
+    height: 0px;
+    
+/*    margin-left: -16px;*/
+/*    margin-top: 36px;*/
+    margin-top: -78px;  
+    margin-left: 125px;
+    overflow: hidden;
+    background-image: linear-gradient(#282828, black); 
+    position: relative;
+}
+
+.item_1:hover{
+    cursor: pointer;
+    width: 94px;
+    margin-left: 15px;
+    transition: 1s;
+}
+
+.item_1:hover > .subMenu{
+    width: 300px;
+    height: auto;
+    margin-left: 111px;
+    min-height: 95px;
+    transition: 1s;
+    cursor: pointer;
+    overflow: visible;
+}
+
+
+
+
+
+#caixa_conteudo_seg{
+    height: auto;
+    min-height: 370px;
+    overflow: hidden;
+    width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    float: left;
+/*    background-color: red;*/
+    
+}
+
+
+.caixa_produto{
+    margin-top: 20px;
+    height: 230px;
+    width: 200px;
+    border: solid 0.5px black;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.caixa_produto:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.caixa_imagem{
+    width: 50%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0.5px black;    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.caixa_imagem img{
+    width: 100%;
+    height: 100%;    
+}
+
+.caixa_descricao{
+    height: 40%;
+    width: 95%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.caixa_descricao p{
+    font-size: 20px;
+}
+
+.caixa_detalhes{
+    height: 15px;
+    width: 60px;    
+    margin-left: 120px;
+    margin-top: -20px;
+}
+
+.caixa_detalhes p{
+    font-size: 20px;
+}
+
+
+.imgSair{
+    background-image: url(../CMS/imagens/sair.png);
+    width: 56px;
+    height: 56px;
+    margin-left: 1500px;  
+    margin-top: -560px;
+}
+
+
+
+.segPesquisa{
+    
+    width: 140px;
+    height: 27px;
+    background-color: white;
+    margin-left: 550px;   
+    margin-bottom: 50px;
+}
+
+
+/*MODAL*/
+.containerIndex{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(106, 109, 114, 0.5);
+    display: none;
+    z-index: 999;
+    position: fixed;
+    
+}
+
+.modalIndex{
+    width: 700px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+  
+/*    background-color: white;*/
+    
+}
+    
+    
+    
+    
     
     
     
@@ -485,24 +680,26 @@ div{
     
     .menuMobile{
         width: 0px;
-        height: 0px;
-/*        min-height: 100px;*/
+        height: 350px;
         overflow: hidden;
-        background-color: gray;
+/*        display: none;*/
+        background-color: black;
         position: relative;
-/*        visibility: hidden;     */
     }
     
     .menuMobile li{
-        font-size: 1.5em;
-    }
-    
-    .iconeMenu:hover > .menuMobile{
-        width: 100px;
-        height: 100px;
-        overflow: visible;
+        font-size: 1.8em;
+        margin-bottom: 15px;
         
     }
+    
+    
+/*
+    .iconeMenu:hover > .menuMobile{
+        height: 300px;
+    }
+*/
+    
 
     
 
@@ -519,6 +716,7 @@ div{
         margin-left: auto;
         margin-right: auto;
         overflow: hidden;
+        background-image: linear-gradient(black, #7c7e7f, black);
         
 
     /*    background-image: linear-gradient(black, #282828, black);*/
@@ -541,7 +739,7 @@ div{
         min-height: 900px;
         overflow: hidden;
         width: inherit;
-        background-image: linear-gradient(black, #7c7e7f, black);
+        
     }
 
 
@@ -665,6 +863,201 @@ div{
     
     
     
+ ////////////////*HOME*////////////////////////////////   
+    
+    
+
+    
+#caixa_principal{
+    height: auto;
+    min-height: 400px;
+    overflow: hidden;
+    width: inherit;    
+    float: left;
+}
+
+#imgHome{
+    height: 400px;
+    width: 100%;
+    background-color: red;
+    background-image: url(../imagens/slide2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+#caixa_itens{
+    height: 500px;
+    width: 300px;
+    border: solid 1px black;
+    float: left;
+    font-size: 30px;
+    margin-left: 15px;
+/*    border-radius: 32px;*/
+    
+}
+
+.item_1{
+    padding: 15px;
+    height: 60px;
+    width: 112px;
+    font-size: 1em;
+    color: white;
+    border-bottom: solid 1px black;
+}
+
+.subMenu{
+    width: 0px;
+    height: 0px;
+    
+/*    margin-left: -16px;*/
+/*    margin-top: 36px;*/
+    margin-top: -78px;  
+    margin-left: 125px;
+    overflow: hidden;
+    background-image: linear-gradient(#282828, black); 
+    position: relative;
+}
+
+.item_1:hover{
+    cursor: pointer;
+    width: 94px;
+    margin-left: 15px;
+    transition: 1s;
+}
+
+.item_1:hover > .subMenu{
+    width: 300px;
+    height: auto;
+    margin-left: 111px;
+    min-height: 95px;
+    transition: 1s;
+    cursor: pointer;
+    overflow: visible;
+}
+
+
+
+
+
+#caixa_conteudo_seg{
+    height: auto;
+    min-height: 370px;
+    overflow: hidden;
+    width: 500px;
+    margin-left: 100px;
+    margin-top: -50px;
+    float: left;
+/*    background-color: red;*/
+    
+}
+
+
+.caixa_produto{
+    margin-top: 20px;
+    height: 350px;
+    width: 400px;
+    border: solid 0.5px black;
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.caixa_produto:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.caixa_imagem{
+    width: 70%;
+    height: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0.5px black;    
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.caixa_imagem img{
+    width: 100%;
+    height: 100%;    
+}
+
+.caixa_descricao{
+    height: 40%;
+    width: 95%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.caixa_descricao p{
+    font-size: 1.8em;
+}
+
+.caixa_detalhes{
+    height: 15px;
+    width: 60px;    
+    margin-left: 280px;
+    margin-top: -75px;
+}
+
+.caixa_detalhes p{
+    font-size: 1.8em;
+}
+
+
+.imgSair{
+    background-image: url(../CMS/imagens/sair.png);
+    width: 56px;
+    height: 56px;
+    margin-left: 1500px;  
+    margin-top: -560px;
+}
+
+
+
+.segPesquisa{
+    
+    width: 140px;
+    height: 27px;
+    background-color: white;
+    margin-left: 550px;   
+    margin-bottom: 50px;
+}
+
+
+/*MODAL*/
+.containerIndex{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(106, 109, 114, 0.5);
+    display: none;
+    z-index: 999;
+    position: fixed;
+    
+}
+
+.modalIndex{
+    width: 700px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+  
+/*    background-color: white;*/
+    
+}
+       
+    
     
     
     
@@ -691,7 +1084,7 @@ div{
     .caixa_footer_cima{
         height: 50px;
         width: 100%;
-        padding: 20px;
+/*        padding: 20px;*/
 
 
 
@@ -757,203 +1150,6 @@ div{
 
 
 
-#caixa_principal{
-    height: auto;
-    min-height: 400px;
-    width: 1400px;    
-    float: left;
-}
-
-#secao_slider{
-    height: 600px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#caixa_itens{
-    height: 500px;
-    width: 250px;;
-    border: solid 1px black;
-    float: left;
-    font-size: 30px;
-    margin-top: -90px;
-    margin-left: 15px;
-/*    border-radius: 32px;*/
-    
-}
-
-.item_1{
-    padding: 15px;
-    height: 60px;
-    width: 221px;
-    font-size: 30px;
-    color: white;
-    border-bottom: solid 1px black;
-}
-
-.subMenu{
-    width: 0px;
-    height: 0px;
-    
-/*    margin-left: -16px;*/
-/*    margin-top: 36px;*/
-    margin-top: -78px;  
-    margin-left: 236px;
-    overflow: hidden;
-    background-image: linear-gradient(#282828, black); 
-    position: relative;
-}
-
-.item_1:hover{
-    cursor: pointer;
-    width: 196px;
-    margin-left: 25px;
-    transition: 1s;
-}
-
-.item_1:hover > .subMenu{
-    width: 300px;
-    height: auto;
-    margin-left: 211px;
-    min-height: 95px;
-    transition: 1s;
-    cursor: pointer;
-    overflow: visible;
-}
-
-
-/*
-#item_2{
-    height: 80px;
-    width: 100%;
-
-    color: white;
-}
-*/
-
-#caixa_conteudo{
-    height: auto;
-    min-height: 300px;
-    margin-bottom: 200px;
-    width: 1100px;;
-    float: left;  
-    
-}
-
-#caixa_conteudo_seg{
-    height: auto;
-    min-height: 370px;
-    overflow: hidden;
-    width: 1040px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    
-}
-
-
-.caixa_produto{
-    margin-top: 20px;
-    height: 350px;
-    width: 300px;
-    border: solid 0.5px black;
-    float: left;
-    margin-right: 20px;
-    margin-left: 20px;
-    color: white;
-    margin-bottom: 30px;
-}
-
-.caixa_produto:hover{
-    transform: scale(1.1);
-}
-
-
-
-
-
-
-
-.caixa_imagem{
-    width: 50%;
-    height: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 0.5px black;    
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.caixa_imagem img{
-    width: 100%;
-    height: 100%;    
-}
-
-.caixa_descricao{
-    height: 40%;
-    width: 95%;
-    
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.caixa_descricao p{
-    font-size: 20px;
-}
-
-.caixa_detalhes{
-    height: 15px;
-    width: 60px;    
-    margin-left: 220px;
-    margin-top: -20px;
-}
-
-.caixa_detalhes p{
-    font-size: 20px;
-}
-
-
-.imgSair{
-    background-image: url(../CMS/imagens/sair.png);
-    width: 56px;
-    height: 56px;
-    margin-left: 1500px;  
-    margin-top: -560px;
-}
-
-
-
-.segPesquisa{
-    width: 200px;
-    height: 35px;
-    background-color: white;
-    margin-left: 1140px;    
-}
-
-
-/*MODAL*/
-.containerIndex{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(106, 109, 114, 0.5);
-    display: none;
-    z-index: 999;
-    position: fixed;
-    
-}
-
-.modalIndex{
-    width: 1250px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 150px;
-  
-/*    background-color: white;*/
-    
-}
 
 
 
@@ -1551,10 +1747,7 @@ div{
     float: left;
 }
 
-.caixa_promocoes_principal_imagem img{
-    height: 300px;
-    width: 400px;    
-}
+
 
 .caixa_promocoes_principal_detalhes{
     height: 300px;

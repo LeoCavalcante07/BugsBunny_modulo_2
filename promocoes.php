@@ -229,7 +229,7 @@
                 
                 <div class="caixa_promocoes_principal">
                     <div class="caixa_promocoes_principal_imagem">
-                        <img src="CMS/<?php echo($imgPromocao)?>">
+                        <img src="CMS/<?php echo($imgPromocao)?>" width="400px" height="300px">
                         
                     </div>
                             <div class="caixa_promocoes_principal_detalhes">

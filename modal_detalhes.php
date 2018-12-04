@@ -76,9 +76,9 @@
     <body>
         
         
-        <div class="caixa_promocoes_principal" style="height: 500px; background-color: black; margin-top: 200px;">
+        <div class="caixa_promocoes_principal" style="height: 500px; width: 600px; background-color: black; margin-top: 50px;">
             <div class="caixa_promocoes_principal_imagem">
-                <img src="CMS/<?php echo($imgPromocao)?>">
+                <img src="CMS/<?php echo($imgPromocao)?>"  width="300px" height="200px">
 
             </div>            
             

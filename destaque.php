@@ -28,6 +28,19 @@
         <script type="text/javascript" src="examples/connected-carousels/jcarousel.connected-carousels.js"></script>
         
         
+        <script>
+            
+            function clickMenu(){                
+                
+                document.getElementById("menuMobile").style.width = "300px";
+                
+                document.getElementById("menuMobile").style.transition = "1s";
+                
+            }
+            
+        </script>
+        
+        
         
         <meta charset="utf-8">
     </head>
@@ -36,18 +49,20 @@
         <header>
             <div id="caixa_header">
                 <div id="caixa_header_central">
-                    <div class="iconeMenu">
+                    <div class="iconeMenu" onclick="clickMenu()">
                     
                     </div>
                     
-                    <div class="menuMobile">
-<!--
+                    <div class="menuMobile" id="menuMobile">
                         <ul>
-                            <li>Home</li>
-                            <li>Home</li>
-                            <li>Home</li>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="destaque.php">Destaque</a></li>
+                            <li><a href="sobre.php">Sobre</a></li>
+                            <li><a href="promocoes.php">Promoção</a></li>
+                            <li><a href="bancas.php">Bancas</a></li>
+                            <li><a href="celebridade.php">Celebridades</a></li>
+                            <li><a href="faleConosco.php">Fale Conosco</a></li>
                         </ul>
--->
                     </div>
                     
                     <div id="caixa_logo">
