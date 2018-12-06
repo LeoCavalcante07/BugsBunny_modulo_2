@@ -129,11 +129,21 @@
             
      
             
-            function clickMenu(){                
+            function clickMenu(){  
+                
+                if(document.getElementById("menuMobile").style.width == "0px"){
+                    document.getElementById("menuMobile").style.width = "300px";
 
-                document.getElementById("menuMobile").style.width = "300px";
+                    document.getElementById("menuMobile").style.transition = "1s";                    
+                }else{
+                    document.getElementById("menuMobile").style.width = "0px";
 
-                document.getElementById("menuMobile").style.transition = "1s";
+                    document.getElementById("menuMobile").style.transition = "1s";                    
+                }
+
+
+                
+                
 
             }
             
@@ -260,6 +270,32 @@
         
     <!--        -------------Conteudo---------------->
             <div id="caixa_principal">
+                
+                
+                <div id="secao_slider">
+                    
+                    
+                    <!-- Start WOWSlider.com BODY section -->
+                    <div id="wowslider-container1">
+                    <div class="ws_images"><ul>
+                            <li><img src="data1/images/bg.png" alt="bg" title="Animes" id="wows1_0"/></li>
+                            <li><a href="http://wowslider.net"><img src="data1/images/bg5.png" alt="jquery image carousel" title="Revistas Cientificas" id="wows1_1"/></a></li>
+                            <li><img src="data1/images/slide2.jpg" alt="slide2" title="Livros" id="wows1_2"/></li>
+                        </ul></div>
+                        <div class="ws_bullets"><div>
+                            <a href="#" title="bg"><span><img src="data1/tooltips/bg.png" alt="bg"/>1</span></a>
+                            <a href="#" title="bg5"><span><img src="data1/tooltips/bg5.png" alt="bg5"/>2</span></a>
+                            <a href="#" title="slide2"><span><img src="data1/tooltips/slide2.jpg" alt="slide2"/>3</span></a>
+                        </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">bootstrap slideshow</a> by WOWSlider.com v8.8</div>
+                    <div class="ws_shadow"></div>
+                    </div>	
+                    <script type="text/javascript" src="engine1/wowslider.js"></script>
+                    <script type="text/javascript" src="engine1/script.js"></script>
+                    <!-- End WOWSlider.com BODY section -->  
+                    
+                    
+                </div>      
+                
                 
                 <div id="imgHome">
                     

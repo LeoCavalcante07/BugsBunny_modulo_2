@@ -359,6 +359,10 @@ div{
     background-repeat: no-repeat;
     background-size: cover;
 }
+    
+#imgHome{
+    display: none;
+}    
 
 #caixa_itens{
     height: 500px;
@@ -633,7 +637,7 @@ div{
     #caixa_logo{
         height: 130px;
         width: 150px;
-        margin-top: -110px;
+        margin-top: -460px;
         background-image: url(../imagens/logo1.png);
         background-size: cover;
         margin-left: auto;
@@ -876,6 +880,10 @@ div{
     float: left;
 }
 
+#secao_slider{
+    display: none;
+}    
+
 #imgHome{
     height: 400px;
     width: 100%;
@@ -900,7 +908,7 @@ div{
 .item_1{
     padding: 15px;
     height: 60px;
-    width: 112px;
+    width: 300px;
     font-size: 1em;
     color: white;
     border-bottom: solid 1px black;
@@ -1726,7 +1734,7 @@ div{
 
 .caixa_promocoes_principal{
     height: 360px;
-    width: 1200px;
+    width: 90%;
     border: solid 1px black;
     margin-left: auto;
     margin-right: auto;   
@@ -1736,8 +1744,8 @@ div{
 }
 
 .caixa_promocoes_principal_imagem{
-    height: 300px;
-    width: 400px;    
+    height: 200px;
+    width: 300px;    
     background-size: cover;
     background-repeat: no-repeat;
     margin-left: 25px;    
@@ -1749,9 +1757,17 @@ div{
 
 
 
+.caixa_promocoes_principal_imagem{
+    height: 200px;
+    width: 300px;     
+    
+}
+
+
+
 .caixa_promocoes_principal_detalhes{
-    height: 300px;
-    width: 600px;    
+    height: 200px;
+    width: 200px;    
 
     margin-left: 100px;    
     margin-bottom: 28px;
