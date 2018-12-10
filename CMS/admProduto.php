@@ -5,6 +5,12 @@
 
     session_start();
 
+    $btnSubmit = "Cadastrar";
+    $nomeProduto = "";
+    $descricao = "";
+    $sinopse = "";
+    $foto = "";
+
     
     $userLogado = "";
     
@@ -20,20 +26,70 @@
 
 
     if(isset($_POST['btnCadastrar'])){
-        $nome = $_POST['txtNomeProduto'];
-        $idSubCategoria = $_POST['cbSubCategoria'];
-        $desc = $_POST['txtDescProduto'];
-        $foto = $_POST['txtNomeFoto'];
-        $sinopse = $_POST['txtSinopseProduto'];
         
-        $sql = "insert into tbl_produto(nome, descricao, foto, idSubCategoria, sinopse) values('".$nome."', '".$desc."', '".$foto."', ".$idSubCategoria.", '".$sinopse."')";
+        if($_POST['btnCadastrar'] == "Cadastrar"){
+           
+            
+            $nome = $_POST['txtNomeProduto'];
+            $idSubCategoria = $_POST['cbSubCategoria'];
+            $desc = $_POST['txtDescProduto'];
+            $foto = $_POST['txtNomeFoto'];
+            $sinopse = $_POST['txtSinopseProduto'];
+
+            $sql = "insert into tbl_produto(nome, descricao, foto, idSubCategoria, sinopse) values('".$nome."', '".$desc."', '".$foto."', ".$idSubCategoria.", '".$sinopse."')";
+
+            //var_dump($sql);
+
+            mysqli_query($conexao, $sql);
+
+            header("location:admProduto.php");            
+            
+        }else if($_POST['btnCadastrar'] == "Editar"){
+            $sql = "update tbl_produto set nome = '".$nomeProduto."', descricao = '".$descricao."', sinopse = '".$sinopse."', idSubCategoria = ".$idSubCategoria.", foto = '".$foto."' where idProduto = ".$_SESSION['idProduto'];
+            
+            mysqli_query($conexao, $sql);
+            header("location:admProduto.php");
+        }
+
         
-        //var_dump($sql);
+    }
+
+
+    if(isset($_GET['modo'])){
         
-        mysqli_query($conexao, $sql);
+        $idProduto = $_GET['idProduto'];
+        $modo = $_GET['modo'];
+        $foto = $_GET['foto'];
         
-        header("location:admProduto.php");
-        
+        if($modo == "excluir"){
+            
+            //unlink($foto);
+            $sql  ="delete from tbl_produto where idProduto =".$idProduto;
+            
+            if(mysqli_query($conexao, $sql)){
+                echo("<script>alert('Produto excluido com sucesso')</script>");
+                header("location:admProduto.php");   
+            }else{
+                echo("<script>alert('Houve um erro na exclusão do produto')</script>");
+            }                        
+            
+            
+        }else if($modo == "buscar"){
+            $btnSubmit  ="Editar";
+            $sql = "select p.idProduto, p.foto, p.nome, p.descricao, p.sinopse, p.idSubCategoria, sc.nomeSubCategoria from tbl_produto as p join tbl_subcategoria as sc on p.idSubCategoria = sc.idSubCategoria where idProduto = ".$idProduto;
+            
+            //var_dump($sql);
+            $select = mysqli_query($conexao, $sql);
+            $rsConsulta = mysqli_fetch_array($select);
+            
+            $_SESSION['idProduto'] = $rsConsulta['idProduto'];
+            $nomeProduto = $rsConsulta['nome'];
+            $descricao = $rsConsulta['descricao'];
+            $sinopse = $rsConsulta['sinopse'];   
+            $idSubCategoria = $rsConsulta['idSubCategoria'];   
+            $nomeSubcategoria = $rsConsulta['nomeSubCategoria'];
+            $foto = $rsConsulta['foto'];
+        }
     }
     
 
@@ -206,31 +262,41 @@
             
             <div class="segFormProduto">
                 <div id="visualizarFoto" style="width: 100%;">
-                
+                    <img src="<?php echo($foto)?>">
                 </div>
                 <form id="frmFoto" action="upload.php" method="post" enctype="multipart/form-data">
                     <input type="file" id="fleFoto" name="fleFoto">
                 </form>
                 
                 <form id="frmCadastro" action="admProduto.php" method="post">
-                    <input type="text" name="txtNomeFoto" style="display: none;">
+                    <input type="text" name="txtNomeFoto" style="display: none;" value="<?php echo($foto)?>">
                     <br>
-                    Nome do produto: <input type="text" name="txtNomeProduto">
+                    Nome do produto: <input type="text" name="txtNomeProduto" value="<?php echo($nomeProduto)?>">
                     
                     <br><br>
                     
                     Categoria:                     
                     <select name="cbSubCategoria">
                         <?php
+                            if($modo != "buscar"){
+                                $idSubCategoria = 0;
+                                $nomeSubcategoria = "Escolha um a opção";
+                            }
+                        ?>
+                        <option value="<?php echo($idSubCategoria)?>"><?php echo($nomeSubcategoria)?></option>
+                        <?php
                             $sql = "select idSubCategoria, nomeSubCategoria from tbl_subcategoria where status = 1";
                             
                             $select = mysqli_query($conexao, $sql);
                             
                             while($rsConsulta = mysqli_fetch_array($select)){
+                                
+                                $idSubCategoria = $rsConsulta['idSubCategoria'];
+                                $nomeSubcategoria = $rsConsulta['nomeSubCategoria'];
                         ?>
                         
-                            <option value="<?php echo($rsConsulta['idSubCategoria'])?>">
-                                <?php echo($rsConsulta['nomeSubCategoria'])?>
+                            <option value="<?php echo($idSubCategoria)?>">
+                                <?php echo($nomeSubcategoria)?>
                             </option>
                         
                         <?php
@@ -238,16 +304,16 @@
                         ?>
                     </select>
                     <br><br>
-                    Descrição:<input type="text" name="txtDescProduto">
+                    Descrição:<input type="text" name="txtDescProduto"  value="<?php echo($descricao)?>">
                     <br><br>
                     Sinopse:<br>
                     <textarea name="txtSinopseProduto" style="resize: none;">
-                    
+                        <?php echo($nomeProduto)?>
                     </textarea>
                     
                     <br><br>
                     
-                    <input type="submit" name="btnCadastrar" value="Cadastrar">
+                    <input type="submit" name="btnCadastrar" value="<?php echo($btnSubmit)?>">
                 </form>
             </div>
             
@@ -271,7 +337,9 @@
                     <img src="<?php echo($rsConsulta['foto'])?>">
                     
                     
-                    <a href="auxiliar.php?idProduto=<?php echo($rsConsulta['idProduto'])?>">Adicionar Promoção</a>
+                    <p><a href="auxiliar.php?idProduto=<?php echo($rsConsulta['idProduto'])?>">Adicionar Promoção</a></p>
+                    <a href="admProduto.php?modo=excluir&idProduto=<?php echo($rsConsulta['idProduto'])?>&foto=<?php echo($rsConsulta['foto'])?>"> <div class="seg_icones"><img src="imagens/delete.png"></div> </a>
+                    <a href="admProduto.php?modo=buscar&idProduto=<?php echo($rsConsulta['idProduto'])?>&foto=<?php echo($rsConsulta['foto'])?>"> <div class="seg_icones"><img src="imagens/edit.png"></div> </a>
                 </div>                
                 </a>
 

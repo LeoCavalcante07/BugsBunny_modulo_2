@@ -618,6 +618,18 @@ a{
 }
 
 
+.seg_icones{
+    width: 24px;
+    height: 24px;
+    float: left;
+    
+}
+
+.seg_icones img{
+    width: 24px;
+    height: 24px;    
+}
+
 
 /*FIM ADM PRODUTOS*/
 
