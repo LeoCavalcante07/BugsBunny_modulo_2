@@ -10,6 +10,8 @@
     $descricao = "";
     $sinopse = "";
     $foto = "";
+    $fotoAntiga = "";
+    $idSubCategoria = 
 
     
     $userLogado = "";
@@ -27,28 +29,45 @@
 
     if(isset($_POST['btnCadastrar'])){
         
+        $nome = $_POST['txtNomeProduto'];
+        $idSubCategoria = $_POST['cbSubCategoria'];
+        $desc = $_POST['txtDescProduto'];
+        $foto = $_POST['txtNomeFoto'];
+        $fotoAntiga = $_POST['txtNomeFotoAntiga'];
+        $sinopse = $_POST['txtSinopseProduto'];        
+        
+        
         if($_POST['btnCadastrar'] == "Cadastrar"){
            
             
-            $nome = $_POST['txtNomeProduto'];
-            $idSubCategoria = $_POST['cbSubCategoria'];
-            $desc = $_POST['txtDescProduto'];
-            $foto = $_POST['txtNomeFoto'];
-            $sinopse = $_POST['txtSinopseProduto'];
 
+            
+
+            
             $sql = "insert into tbl_produto(nome, descricao, foto, idSubCategoria, sinopse) values('".$nome."', '".$desc."', '".$foto."', ".$idSubCategoria.", '".$sinopse."')";
-
-            //var_dump($sql);
+            
+            //$var_dump($sql);
 
             mysqli_query($conexao, $sql);
 
-            header("location:admProduto.php");            
+            //header("location:admProduto.php");            
             
-        }else if($_POST['btnCadastrar'] == "Editar"){
-            $sql = "update tbl_produto set nome = '".$nomeProduto."', descricao = '".$descricao."', sinopse = '".$sinopse."', idSubCategoria = ".$idSubCategoria.", foto = '".$foto."' where idProduto = ".$_SESSION['idProduto'];
+        }elseif($_POST['btnCadastrar'] == "Editar"){
+
             
+            if($foto != $fotoAntiga){  
+                echo("<script>alert('foto diferente')</script>");
+                unlink($foto);
+                $sql = "update tbl_produto set nome = '".$nomeProduto."', descricao = '".$descricao."', sinopse = '".$sinopse."', idSubCategoria = ".$idSubCategoria.", foto = '".$fotoAntiga."' where idProduto = ".$_SESSION['idProduto'];
+                
+                
+            }else{
+                echo("<script>alert('foto igual')</script>");
+                $sql = "update tbl_produto set nome = '".$nomeProduto."', descricao = '".$descricao."', sinopse = '".$sinopse."', idSubCategoria = ".$idSubCategoria." where idProduto = ".$_SESSION['idProduto'];
+            }
+            var_dump($sql);
             mysqli_query($conexao, $sql);
-            header("location:admProduto.php");
+            //header("location:admProduto.php");
         }
 
         
@@ -88,7 +107,7 @@
             $sinopse = $rsConsulta['sinopse'];   
             $idSubCategoria = $rsConsulta['idSubCategoria'];   
             $nomeSubcategoria = $rsConsulta['nomeSubCategoria'];
-            $foto = $rsConsulta['foto'];
+            $fotoAntiga = $rsConsulta['foto'];
         }
     }
     
@@ -269,7 +288,8 @@
                 </form>
                 
                 <form id="frmCadastro" action="admProduto.php" method="post">
-                    <input type="text" name="txtNomeFoto" style="display: none;" value="<?php echo($foto)?>">
+                    <input type="text" name="txtNomeFoto">
+                    <input type="text" name="txtNomeFotoAntiga"  value="<?php echo($fotoAntiga)?>">
                     <br>
                     Nome do produto: <input type="text" name="txtNomeProduto" value="<?php echo($nomeProduto)?>">
                     
