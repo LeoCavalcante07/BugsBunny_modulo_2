@@ -88,7 +88,7 @@
                     </div>
                     
                     
-                    <a href="adm_produto_categoria.php">
+                    <a href="admProduto.php">
                         <div class="caixa_menu_adm">
 
                             <div class="caixa_menu_adm_img">
@@ -96,7 +96,7 @@
                             </div>
 
                             <div class="caixa_menu_adm_titulo">
-                                <p>Produtos/Categorias</p>
+                                <p>Produtos</p>
                             </div>                    
                         </div>
                     </a>                    
@@ -110,7 +110,7 @@
                             </div>
 
                             <div class="caixa_menu_adm_titulo">
-                                <p>Usuários/Niveis</p>
+                                <p>Usuários</p>
                             </div>    
                         </a>
                     </div>
@@ -127,92 +127,18 @@
             </div>
             
 <!--            Fim Menu      -->
-            <div class="caixa_titulo">
-                <h1>Páginas</h1>
-            </div>
+
             
-            
-            <div class="caixa_seg_primeria_sessao">
-                <div class="caixa_opt_destaques">
-                    <a href="admDestaque.php">
-                        <div class="caixa_opt_destaques_img">
-                            <img src="imagens/destaque.png">
-                        </div>
-                        <div class="caixa_opt_destaques_text">
-                            <p>Destaques</p>
-                        </div>
-                    </a>
-                </div>     
+            <div class="seg">
+                <div class="caixa_userAdm_opt" style="margin-left: 300px;">
+                    <a href="admCategoria.php"><img src="imagens/categoria.png"></a>
+                </div>
 
 
-                <div class="caixa_opt_destaques">
-                    <a href="admSobre.php">
-                        <div class="caixa_opt_destaques_img">
-                            <img src="imagens/sobre.png">
-                        </div>
-                        <div class="caixa_opt_destaques_text">
-                            <p>Sobre</p>
-                        </div>
-                    </a>    
-                </div>     
-                
-                
-                
-                <div class="caixa_opt_destaques">
-                    <a href="admBanca.php">
-                    
-                        <div class="caixa_opt_destaques_img">
-                            <img src="imagens/bancas.png">
-                        </div>
-                        <div class="caixa_opt_destaques_text">
-                            <p>Bancas</p>
-                        </div>                     
-                    
-                    </a>
-   
-                </div>                 
-            </div>
-            
-            
-            
-            <div class="caixa_seg_segunda_sessao">
-                <a href="admCelebridades.php">
-                    <div class="caixa_opt_destaques">
-                        <div class="caixa_opt_destaques_img">
-                            <img src="imagens/celebridade.png">
-                        </div>
-                        <div class="caixa_opt_destaques_text">
-                            <p>Celebridade</p>
-                        </div>
-                    </div>                  
-                </a>
- 
-                
-                
-                
-                <div class="caixa_opt_destaques">
-                    <div class="caixa_opt_destaques_img">
-                        <img src="imagens/home.png">
-                    </div>
-                    <div class="caixa_opt_destaques_text">
-                        <p>Home</p>
-                    </div>
-                </div> 
-                         
-                
-            </div>
-            
-            
-            
-            
-            
-
-
-          
-            
-            
-            
-            
+                <div class="caixa_userAdm_opt" style="margin-left: 100px;">
+                    <a href="admNivel.php"><img src="imagens/subcategoria.png"></a>
+                </div>            
+            </div>              
             
 <!--            FOOTER-->
             <footer>

@@ -6,8 +6,8 @@
     session_start();
 
     $btnSubmit = "Cadastrar";
-    $nomeProduto = "";
-    $descricao = "";
+    $nome = "";
+    $desc = "";
     $sinopse = "";
     $foto = "";
     $fotoAntiga = "";
@@ -50,24 +50,24 @@
 
             mysqli_query($conexao, $sql);
 
-            //header("location:admProduto.php");            
+            header("location:admProduto.php");            
             
         }elseif($_POST['btnCadastrar'] == "Editar"){
 
             
-            if($foto != $fotoAntiga){  
-                echo("<script>alert('foto diferente')</script>");
-                unlink($foto);
-                $sql = "update tbl_produto set nome = '".$nomeProduto."', descricao = '".$descricao."', sinopse = '".$sinopse."', idSubCategoria = ".$idSubCategoria.", foto = '".$fotoAntiga."' where idProduto = ".$_SESSION['idProduto'];
+            if($foto == $fotoAntiga){  
+                //echo("<script>alert('foto igual')</script>");
+                $sql = "update tbl_produto set nome = '".$nome."', descricao = '".$desc."', sinopse = '".$sinopse."', idSubCategoria = ".$idSubCategoria." where idProduto = ".$_SESSION['idProduto'];
                 
                 
-            }else{
-                echo("<script>alert('foto igual')</script>");
-                $sql = "update tbl_produto set nome = '".$nomeProduto."', descricao = '".$descricao."', sinopse = '".$sinopse."', idSubCategoria = ".$idSubCategoria." where idProduto = ".$_SESSION['idProduto'];
+            }else{             
+                //echo("<script>alert('foto diferente')</script>");
+                unlink($fotoAntiga);
+                $sql = "update tbl_produto set nome = '".$nome."', descricao = '".$desc."', sinopse = '".$sinopse."', idSubCategoria = ".$idSubCategoria.", foto = '".$foto."' where idProduto = ".$_SESSION['idProduto'];                
             }
             var_dump($sql);
             mysqli_query($conexao, $sql);
-            //header("location:admProduto.php");
+            header("location:admProduto.php");
         }
 
         
@@ -82,7 +82,7 @@
         
         if($modo == "excluir"){
             
-            //unlink($foto);
+            unlink($foto);
             $sql  ="delete from tbl_produto where idProduto =".$idProduto;
             
             if(mysqli_query($conexao, $sql)){
@@ -102,8 +102,8 @@
             $rsConsulta = mysqli_fetch_array($select);
             
             $_SESSION['idProduto'] = $rsConsulta['idProduto'];
-            $nomeProduto = $rsConsulta['nome'];
-            $descricao = $rsConsulta['descricao'];
+            $nome = $rsConsulta['nome'];
+            $desc = $rsConsulta['descricao'];
             $sinopse = $rsConsulta['sinopse'];   
             $idSubCategoria = $rsConsulta['idSubCategoria'];   
             $nomeSubcategoria = $rsConsulta['nomeSubCategoria'];
@@ -291,7 +291,7 @@
                     <input type="text" name="txtNomeFoto">
                     <input type="text" name="txtNomeFotoAntiga"  value="<?php echo($fotoAntiga)?>">
                     <br>
-                    Nome do produto: <input type="text" name="txtNomeProduto" value="<?php echo($nomeProduto)?>">
+                    Nome do produto: <input type="text" name="txtNomeProduto" value="<?php echo($nome)?>">
                     
                     <br><br>
                     
@@ -324,11 +324,11 @@
                         ?>
                     </select>
                     <br><br>
-                    Descrição:<input type="text" name="txtDescProduto"  value="<?php echo($descricao)?>">
+                    Descrição:<input type="text" name="txtDescProduto"  value="<?php echo($desc)?>">
                     <br><br>
                     Sinopse:<br>
                     <textarea name="txtSinopseProduto" style="resize: none;">
-                        <?php echo($nomeProduto)?>
+                        <?php echo($nome)?>
                     </textarea>
                     
                     <br><br>
