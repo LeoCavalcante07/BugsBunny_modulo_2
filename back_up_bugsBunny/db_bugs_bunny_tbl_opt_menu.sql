@@ -16,34 +16,30 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `tbl_usuarios`
+-- Table structure for table `tbl_opt_menu`
 --
 
-DROP TABLE IF EXISTS `tbl_usuarios`;
+DROP TABLE IF EXISTS `tbl_opt_menu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `tbl_usuarios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `senha` varchar(45) NOT NULL,
-  `idNivel` int(11) NOT NULL,
+CREATE TABLE `tbl_opt_menu` (
+  `idOptMenu` int(11) NOT NULL AUTO_INCREMENT,
+  `nomeOptMenu` varchar(45) NOT NULL,
+  `icone` varchar(100) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `email_UNIQUE` (`email`),
-  KEY `idNivel_idx` (`idNivel`),
-  CONSTRAINT `idNivel` FOREIGN KEY (`idNivel`) REFERENCES `tbl_niveis` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `href` varchar(45) NOT NULL,
+  PRIMARY KEY (`idOptMenu`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tbl_usuarios`
+-- Dumping data for table `tbl_opt_menu`
 --
 
-LOCK TABLES `tbl_usuarios` WRITE;
-/*!40000 ALTER TABLE `tbl_usuarios` DISABLE KEYS */;
-INSERT INTO `tbl_usuarios` VALUES (1,'Leonardo','leo@gmail','123',27,1),(5,'Joana','a','a',29,1);
-/*!40000 ALTER TABLE `tbl_usuarios` ENABLE KEYS */;
+LOCK TABLES `tbl_opt_menu` WRITE;
+/*!40000 ALTER TABLE `tbl_opt_menu` DISABLE KEYS */;
+INSERT INTO `tbl_opt_menu` VALUES (1,'Conteudo','arquivos/admCont.png',1,'index.php'),(2,'Fale Conosco','arquivos/admFale.png',1,'admFaleConosco.php'),(3,'Produtos/Categorias','arquivos/admProduct.png',1,'adm_produto_categoria.php'),(4,'Usuários/Niveis','arquivos/admUsers.png',1,'admControleUsuario.php');
+/*!40000 ALTER TABLE `tbl_opt_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-12 16:54:02
+-- Dump completed on 2018-12-12 16:53:59

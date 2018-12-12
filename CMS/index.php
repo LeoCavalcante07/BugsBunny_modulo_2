@@ -11,13 +11,19 @@
     
     $idUser = $_SESSION['idUsuario'];
 
-    $sql = "select * from tbl_usuarios where id = ".$idUser;
+    //$sql = "select * from tbl_usuarios where id = ".$idUser;
+
+    $sql = "select idNivel, nome from tbl_usuarios where id = ".$idUser;
 
     $select = mysqli_query($conexao, $sql);
 
     $rsUsuario = mysqli_fetch_array($select);
 
     $userLogado = $rsUsuario['nome'];
+
+  
+
+    
 
 
     
@@ -59,61 +65,34 @@
 <!--    Menu            -->
             <div class="caixa_menu">
                 <div class="caixa_menu_seg_nav">
+                    
+                    <?php
+                        $sql = "select op.nomeOptMenu, op.icone, op.href from tbl_opt_menu_nivel as opn join tbl_opt_menu as op on op.idOptMenu = opn.idOptMenu 
+                    join tbl_niveis as n on n.id = opn.idNivel where n.id = ".$rsUsuario['idNivel'];
+
+
+                        //var_dump($sql);
+                        $select = mysqli_query($conexao, $sql);
+
+                        while($rsMenu = mysqli_fetch_array($select)){
+                    ?>
                     <div class="caixa_menu_adm">
-                        <a href="index.php">                        
+                        <a href="<?php echo($rsMenu['href'])?>">                        
                             <div class="caixa_menu_adm_img">
-                                <img src="imagens/admCont.png">
+                                <img src="<?php echo($rsMenu['icone'])?>">
                             </div>
 
                             <div class="caixa_menu_adm_titulo">
-                                <p>Conteúdo</p>
+                                <p><?php echo($rsMenu['nomeOptMenu'])?></p>
                             </div>                        
                         </a>
 
                     </div>
                     
-                    <div class="caixa_menu_adm">
-                        
-                        <a href="admFaleConosco.php">
-                            <div class="caixa_menu_adm_img">
-                                <img src="imagens/admFale.png">
-                            </div>
+                    <?php
+                        }
+                    ?>
 
-                            <div class="caixa_menu_adm_titulo">
-                                <p>Fale Conosco</p>
-                            </div>                          
-                        </a>
-                        
-                  
-                    </div>
-                    
-                    
-                    <a href="adm_produto_categoria.php">
-                        <div class="caixa_menu_adm">
-
-                            <div class="caixa_menu_adm_img">
-                                <img src="imagens/admProduct.png">
-                            </div>
-
-                            <div class="caixa_menu_adm_titulo">
-                                <p>Produtos/Categorias</p>
-                            </div>                    
-                        </div>
-                    </a>                    
-
-                    
-                    <div class="caixa_menu_adm">
-                        <a href="admControleUsuario.php">
-                        
-                            <div class="caixa_menu_adm_img">
-                                <img src="imagens/admUsers.png">
-                            </div>
-
-                            <div class="caixa_menu_adm_titulo">
-                                <p>Usuários/Niveis</p>
-                            </div>    
-                        </a>
-                    </div>
                 </div>
                 
                 <div class="caixa_menu_direita">

@@ -28,7 +28,7 @@ CREATE TABLE `tbl_niveis` (
   `descricao` text NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `tbl_niveis` (
 
 LOCK TABLES `tbl_niveis` WRITE;
 /*!40000 ALTER TABLE `tbl_niveis` DISABLE KEYS */;
-INSERT INTO `tbl_niveis` VALUES (27,'Administrador','                                faz tudinho                                                                         ',0),(29,'Cataloguista','atualiza as paginas                                             ',0),(30,'teste do marcel 666','                                sdf dsf dsf                                                                           ',1);
+INSERT INTO `tbl_niveis` VALUES (27,'Administrador','tem todas as permissões                                                                                                 ',1),(29,'Cataloguista','                                atualiza as paginas                                                                         ',1),(31,'Operador Básico','Gerencia as operações básicas do site                                                            ',1);
 /*!40000 ALTER TABLE `tbl_niveis` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-27 16:55:19
+-- Dump completed on 2018-12-12 16:53:59

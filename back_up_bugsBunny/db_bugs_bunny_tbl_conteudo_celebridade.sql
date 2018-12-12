@@ -1,4 +1,4 @@
-﻿-- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
 --
 -- Host: localhost    Database: db_bugs_bunny
 -- ------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE `tbl_conteudo_celebridade` (
   PRIMARY KEY (`idConteudoCelebridade`),
   KEY `idCelebridade_idx` (`idCelebridade`),
   CONSTRAINT `idCelebridade` FOREIGN KEY (`idCelebridade`) REFERENCES `tbl_celebridade` (`idcelebridade`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `tbl_conteudo_celebridade` (
 
 LOCK TABLES `tbl_conteudo_celebridade` WRITE;
 /*!40000 ALTER TABLE `tbl_conteudo_celebridade` DISABLE KEYS */;
-INSERT INTO `tbl_conteudo_celebridade` VALUES (32,'infancia de lulu','           Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.\r\nApós alguns segundos, as partículas das cinzas começaram a se agitar a ponto de queimarem.                                  ','arquivos/29649e774c868d164dd0bc8d41bb96d8.jpg','arquivos/1cb745860c5a52636eaad74fee7bc631.jpg',17,1),(33,'Assalto ao banco','Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.\r\nApós alguns segundos, as partículas das cinzas começaram a se agitar a ponto de queimarem.                                             ','arquivos/0204c22f2f9890e14f0357a3f30e992f.jpeg','arquivos/0a0aaefb5c6426899ed262dc5f12cb5c.jpg',17,1);
+INSERT INTO `tbl_conteudo_celebridade` VALUES (32,'infancia de lulu','           Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.\r\nApós alguns segundos, as partículas das cinzas começaram a se agitar a ponto de queimarem.                                  ','arquivos/29649e774c868d164dd0bc8d41bb96d8.jpg','arquivos/1cb745860c5a52636eaad74fee7bc631.jpg',17,1),(33,'Assalto ao banco','Guinchou fracamente, seu fogo apagou, seu corpo caiu no chão e se transformou em cinzas negras.\r\nApós alguns segundos, as partículas das cinzas começaram a se agitar a ponto de queimarem.                                             ','arquivos/0204c22f2f9890e14f0357a3f30e992f.jpeg','arquivos/0a0aaefb5c6426899ed262dc5f12cb5c.jpg',17,1),(35,'neymar','Post Your Answer\r\nBy clicking \"Post Your Answer\", you acknowledge that you have read our updated terms of service, privacy policy and cookie policy, and that your continued use of the website is subject to these policies.                                            ','arquivos/a7e14b4e6368d4399d8aa6034623ca98.jpg','arquivos/6ab30cdcbef9fbc15554b93c299c588f.jpg',17,1);
 /*!40000 ALTER TABLE `tbl_conteudo_celebridade` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-27 16:55:20
+-- Dump completed on 2018-12-12 16:54:00

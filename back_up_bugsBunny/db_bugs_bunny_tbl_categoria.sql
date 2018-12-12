@@ -25,10 +25,10 @@ DROP TABLE IF EXISTS `tbl_categoria`;
 CREATE TABLE `tbl_categoria` (
   `idCategoria` int(11) NOT NULL AUTO_INCREMENT,
   `nomeCategoria` varchar(45) NOT NULL,
-  `desc` varchar(200) DEFAULT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
   `status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`idCategoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `tbl_categoria` (
 
 LOCK TABLES `tbl_categoria` WRITE;
 /*!40000 ALTER TABLE `tbl_categoria` DISABLE KEYS */;
-INSERT INTO `tbl_categoria` VALUES (1,'terror','filmes de dar medo',1),(2,'romance','filmes de paixões',1);
+INSERT INTO `tbl_categoria` VALUES (1,'terror','filmes de dar medo',1),(2,'romance','filmes de paixão',1);
 /*!40000 ALTER TABLE `tbl_categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-27 16:55:22
+-- Dump completed on 2018-12-12 16:54:02
