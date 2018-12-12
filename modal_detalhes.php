@@ -76,14 +76,14 @@
     <body>
         
         
-        <div class="caixa_promocoes_principal" style="height: 500px; width: 600px; background-color: black; margin-top: 50px;">
-            <div class="caixa_promocoes_principal_imagem">
-                <img src="CMS/<?php echo($imgPromocao)?>"  width="300px" height="200px">
+        <div class="caixa_detalhe_principal">
+            <div class="caixa_detalhe_principal_imagem">
+                <img src="CMS/<?php echo($imgPromocao)?>">
 
             </div>            
             
-            <div class="caixa_promocoes_principal_detalhes">
-                <div class="caixa_promocoes_principal_detalhes_nome">
+            <div class="caixa_detalhes_descricoes">
+                <div class="caixa_detalhes_nome">
                     <p><?php echo($tituloPromocao)?></p>
                 </div>
 
@@ -91,11 +91,11 @@
                     <p>Sinopse:</p>
                 </div>
 
-                <div class="caixa_promocoes_principal_detalhes_descricao">
+                <div class="caixa_detalhes_sinopse">
                     <p><?php echo($sinopse)?> </p>
                 </div>
 
-                <div class="caixa_promocao_detalhes_preco_antigo">
+                <div class="caixa_detalhes_preco_antigo">
                     <p><?php
                             if($precoAntigo != "R$")
                                 echo($precoAntigo)
@@ -104,7 +104,7 @@
                     </p>
                 </div>
 
-                <div class="caixa_promocao_detalhes_preco_atual">
+                <div class="caixa_detalhes_preco_atual">
                     <p>R$<?php echo($precoAtual)?></p>
                 </div>                                
 

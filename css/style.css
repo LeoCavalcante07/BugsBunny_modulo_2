@@ -391,7 +391,7 @@ div{
     
 /*    margin-left: -16px;*/
 /*    margin-top: 36px;*/
-    margin-top: -78px;  
+    margin-top: -68px;  
     margin-left: 125px;
     overflow: hidden;
     background-image: linear-gradient(#282828, black); 
@@ -536,6 +536,91 @@ div{
 /*    background-color: white;*/
     
 }
+    
+    
+    
+    
+/*MODAL DETALHES*/
+    .caixa_detalhe_principal{
+        height: auto; 
+        min-height: 200px;
+        overflow: hidden;
+        width: 650px; 
+        background-color: black; 
+        margin-top: 50px;     
+        margin-left: auto;
+        margin-right: auto;        
+        border-radius: 20px;
+    }
+    
+    .caixa_detalhe_principal_imagem{
+        height: 300px; 
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 50px;
+        float: left;
+    }
+    
+    .caixa_detalhe_principal_imagem img{
+        height: 200px; 
+        width: 200px;        
+    }
+    
+    .caixa_detalhes_descricoes{
+
+        margin-top: 50px;
+        height: auto; 
+        min-height: 50px;
+        overflow: hidden;
+        width: 300px; 
+        margin-left: 50px;
+        float: left;
+    }
+    
+    .caixa_detalhes_nome{
+        margin: 0px; 
+        height: 50px; 
+        width: 300px;
+        font-size: 2.3em;
+        margin-bottom: 15px;
+    }
+    
+    .caixa_detalhes_sinopse{
+        width: 290px; 
+
+        height: auto;
+        min-height: 70px;
+        overflow: hidden;
+        margin-top: -25px; 
+        font-size: 1em; 
+        padding-left: 5px; 
+        padding-right:5px;
+        
+    }
+    
+    .caixa_detalhes_preco_antigo{
+        width: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    
+    .caixa_detalhes_preco_antigo p{
+        color: red;
+        text-decoration: line-through;
+    }
+    
+    .caixa_detalhes_preco_atual{
+        width: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2em;
+    }    
+    
+    .caixa_detalhes_preco_atual p{
+        color: lawngreen;
+    }
     
     
     
@@ -872,199 +957,290 @@ div{
     
 
     
-#caixa_principal{
-    height: auto;
-    min-height: 400px;
-    overflow: hidden;
-    width: inherit;    
-    float: left;
-}
+    #caixa_principal{
+        height: auto;
+        min-height: 400px;
+        overflow: hidden;
+        width: inherit;    
+        float: left;
+    }
 
-#secao_slider{
-    display: none;
-}    
+    #secao_slider{
+        display: none;
+    }    
 
-#imgHome{
-    height: 400px;
-    width: 100%;
-    background-color: red;
-    background-image: url(../imagens/slide2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 50px;
-}
+    #imgHome{
+        height: 400px;
+        width: 100%;
+        background-color: red;
+        background-image: url(../imagens/slide2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 50px;
+    }
 
-#caixa_itens{
-    height: 500px;
-    width: 300px;
-    border: solid 1px black;
-    float: left;
-    font-size: 30px;
-    margin-left: 15px;
-/*    border-radius: 32px;*/
-    
-}
+    #caixa_itens{
+        height: 500px;
+        width: 300px;
+        border: solid 1px black;
+        float: left;
+        font-size: 30px;
+        margin-left: 15px;
+    /*    border-radius: 32px;*/
 
-.item_1{
-    padding: 15px;
-    height: 60px;
-    width: 300px;
-    font-size: 1em;
-    color: white;
-    border-bottom: solid 1px black;
-}
+    }
 
-.subMenu{
-    width: 0px;
-    height: 0px;
-    
-/*    margin-left: -16px;*/
-/*    margin-top: 36px;*/
-    margin-top: -78px;  
-    margin-left: 125px;
-    overflow: hidden;
-    background-image: linear-gradient(#282828, black); 
-    position: relative;
-}
+    .item_1{
+        padding: 15px;
+        height: 60px;
+        width: 300px;
+        font-size: 1em;
+        color: white;
+        border-bottom: solid 1px black;
+    }
 
-.item_1:hover{
-    cursor: pointer;
-    width: 94px;
-    margin-left: 15px;
-    transition: 1s;
-}
+    .subMenu{
+        width: 0px;
+        height: 0px;
 
-.item_1:hover > .subMenu{
-    width: 300px;
-    height: auto;
-    margin-left: 111px;
-    min-height: 95px;
-    transition: 1s;
-    cursor: pointer;
-    overflow: visible;
-}
+    /*    margin-left: -16px;*/
+    /*    margin-top: 36px;*/
+        margin-top: -78px;  
+        margin-left: 125px;
+        overflow: hidden;
+        background-image: linear-gradient(#282828, black); 
+        position: relative;
+    }
 
+    .item_1:hover{
+        cursor: pointer;
+        width: 94px;
+        margin-left: 15px;
+        transition: 1s;
+    }
 
-
-
-
-#caixa_conteudo_seg{
-    height: auto;
-    min-height: 370px;
-    overflow: hidden;
-    width: 500px;
-    margin-left: 100px;
-    margin-top: -50px;
-    float: left;
-/*    background-color: red;*/
-    
-}
-
-
-.caixa_produto{
-    margin-top: 20px;
-    height: 350px;
-    width: 400px;
-    border: solid 0.5px black;
-    float: left;
-    margin-right: 20px;
-    margin-left: 20px;
-    color: white;
-    margin-bottom: 30px;
-}
-
-.caixa_produto:hover{
-    transform: scale(1.1);
-}
+    .item_1:hover > .subMenu{
+        width: 300px;
+        height: auto;
+        margin-left: 111px;
+        min-height: 95px;
+        transition: 1s;
+        cursor: pointer;
+        overflow: visible;
+    }
 
 
 
 
 
+    #caixa_conteudo_seg{
+        height: auto;
+        min-height: 370px;
+        overflow: hidden;
+        width: 500px;
+        margin-left: 100px;
+        margin-top: -50px;
+        float: left;
+    /*    background-color: red;*/
+
+    }
 
 
-.caixa_imagem{
-    width: 70%;
-    height: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 0.5px black;    
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
+    .caixa_produto{
+        margin-top: 20px;
+        height: 350px;
+        width: 400px;
+        border: solid 0.5px black;
+        float: left;
+        margin-right: 20px;
+        margin-left: 20px;
+        color: white;
+        margin-bottom: 30px;
+    }
 
-.caixa_imagem img{
-    width: 100%;
-    height: 100%;    
-}
-
-.caixa_descricao{
-    height: 40%;
-    width: 95%;
-    
-    margin-left: auto;
-    margin-right: auto;
-    
-}
-
-.caixa_descricao p{
-    font-size: 1.8em;
-}
-
-.caixa_detalhes{
-    height: 15px;
-    width: 60px;    
-    margin-left: 280px;
-    margin-top: -75px;
-}
-
-.caixa_detalhes p{
-    font-size: 1.8em;
-}
-
-
-.imgSair{
-    background-image: url(../CMS/imagens/sair.png);
-    width: 56px;
-    height: 56px;
-    margin-left: 1500px;  
-    margin-top: -560px;
-}
+    .caixa_produto:hover{
+        transform: scale(1.1);
+    }
 
 
 
-.segPesquisa{
-    
-    width: 140px;
-    height: 27px;
-    background-color: white;
-    margin-left: 550px;   
-    margin-bottom: 50px;
-}
 
 
-/*MODAL*/
-.containerIndex{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(106, 109, 114, 0.5);
-    display: none;
-    z-index: 999;
-    position: fixed;
-    
-}
 
-.modalIndex{
-    width: 700px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 80px;
-  
-/*    background-color: white;*/
-    
-}
+
+    .caixa_imagem{
+        width: 70%;
+        height: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 0.5px black;    
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .caixa_imagem img{
+        width: 100%;
+        height: 100%;    
+    }
+
+    .caixa_descricao{
+        height: 40%;
+        width: 95%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .caixa_descricao p{
+        font-size: 1.8em;
+    }
+
+    .caixa_detalhes{
+        height: 15px;
+        width: 60px;    
+        margin-left: 280px;
+        margin-top: -75px;
+    }
+
+    .caixa_detalhes p{
+        font-size: 1.8em;
+    }
+
+
+    .imgSair{
+        background-image: url(../CMS/imagens/sair.png);
+        width: 56px;
+        height: 56px;
+        margin-left: 1500px;  
+        margin-top: -560px;
+    }
+
+
+
+    .segPesquisa{
+
+        width: 140px;
+        height: 27px;
+        background-color: white;
+        margin-left: 550px;   
+        margin-bottom: 50px;
+    }
+
+
+    /*MODAL*/
+    .containerIndex{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(106, 109, 114, 0.5);
+        display: none;
+        z-index: 999;
+        position: fixed;
+
+    }
+
+    .modalIndex{
+        width: 700px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+
+    /*    background-color: white;*/
+
+    }
        
+    
+    
+    
+    /*MODAL DETALHES*/
+    .caixa_detalhe_principal{
+        height: auto; 
+        min-height: 600px;
+        overflow: hidden;
+        width: 90%; 
+        background-color: black; 
+        margin-top: 250px;     
+        margin-left: auto;
+        margin-right: auto;        
+        border-radius: 20px;
+    }
+    
+    .caixa_detalhe_principal_imagem{
+        height: 400px; 
+        width: 400px;
+        margin-top: 50px;
+        margin-left: 50px;
+        float: left;
+    }
+    
+    .caixa_detalhe_principal_imagem img{
+        height: 400px; 
+        width: 400px;     
+    }
+    
+    .caixa_detalhes_descricoes{
+
+        margin-top: 50px;
+        height: auto; 
+        min-height: 400px;
+        overflow: hidden;
+        width: 360px; 
+        margin-left: 50px;
+        float: left;
+        background-color: red;
+    }
+    
+    .caixa_detalhes_nome{
+        margin: 0px; 
+        height: 50px; 
+        width: 300px;
+        
+        margin-bottom: 15px;
+    }
+    
+    .caixa_detalhes_nome p{
+        font-size: 54px;
+    }
+    
+    .caixa_detalhes_sinopse{
+        width: 290px; 
+
+        height: auto;
+        min-height: 70px;
+        overflow: hidden;
+        margin-top: -25px; 
+        font-size: 1em; 
+        padding-left: 5px; 
+        padding-right:5px;
+        
+    }
+    
+
+    
+    .caixa_detalhes_preco_antigo{
+        width: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    
+    .caixa_detalhes_preco_antigo p{
+        color: red;
+        text-decoration: line-through;
+    }
+    
+    .caixa_detalhes_preco_atual{
+        width: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2em;
+    }    
+    
+    .caixa_detalhes_preco_atual p{
+        color: lawngreen;
+    }
     
     
     
