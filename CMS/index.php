@@ -3,6 +3,7 @@
     session_start();
 
     include_once('../conexao.php');
+    include_once('carregarMenu.php');
     $conexao = getConexao();
 
 
@@ -10,6 +11,10 @@
     $userLogado = "";
     
     $idUser = $_SESSION['idUsuario'];
+
+
+    //var_dump($selectMenu);
+
 
     //$sql = "select * from tbl_usuarios where id = ".$idUser;
 
@@ -19,14 +24,10 @@
 
     $rsUsuario = mysqli_fetch_array($select);
 
+    $selectMenu = carregarMenu($rsUsuario['idNivel']);
+
     $userLogado = $rsUsuario['nome'];
 
-  
-
-    
-
-
-    
 
 
 ?>
@@ -67,14 +68,8 @@
                 <div class="caixa_menu_seg_nav">
                     
                     <?php
-                        $sql = "select op.nomeOptMenu, op.icone, op.href from tbl_opt_menu_nivel as opn join tbl_opt_menu as op on op.idOptMenu = opn.idOptMenu 
-                    join tbl_niveis as n on n.id = opn.idNivel where n.id = ".$rsUsuario['idNivel'];
 
-
-                        //var_dump($sql);
-                        $select = mysqli_query($conexao, $sql);
-
-                        while($rsMenu = mysqli_fetch_array($select)){
+                        while($rsMenu = mysqli_fetch_array($selectMenu)){
                     ?>
                     <div class="caixa_menu_adm">
                         <a href="<?php echo($rsMenu['href'])?>">                        
