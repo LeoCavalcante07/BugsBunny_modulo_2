@@ -2,6 +2,8 @@
 
     session_start();
 
+    include_once('carregarMenu.php');
+
     include_once('../conexao.php');
     $conexao = getConexao();
 
@@ -18,6 +20,11 @@
     $rsUsuario = mysqli_fetch_array($select);
 
     $userLogado = $rsUsuario['nome'];
+
+
+    $arrayMenu = array();
+
+    $arrayMenu = carregarMenu($rsUsuario['idNivel']);
 
 
     
@@ -59,61 +66,17 @@
 <!--    Menu            -->
             <div class="caixa_menu">
                 <div class="caixa_menu_seg_nav">
-                    <div class="caixa_menu_adm">
-                        <a href="index.php">                        
-                            <div class="caixa_menu_adm_img">
-                                <img src="imagens/admCont.png">
-                            </div>
-
-                            <div class="caixa_menu_adm_titulo">
-                                <p>Conteúdo</p>
-                            </div>                        
-                        </a>
-
-                    </div>
                     
-                    <div class="caixa_menu_adm">
-                        
-                        <a href="admFaleConosco.php">
-                            <div class="caixa_menu_adm_img">
-                                <img src="imagens/admFale.png">
-                            </div>
-
-                            <div class="caixa_menu_adm_titulo">
-                                <p>Fale Conosco</p>
-                            </div>                          
-                        </a>
-                        
-                  
-                    </div>
+                    <?php
+                        $i = 0;
+                        while($i < count($arrayMenu)){
+                            echo($arrayMenu[$i]);
+                            $i++;
+                        }
                     
+                    ?>
                     
-                    <a href="admProduto.php">
-                        <div class="caixa_menu_adm">
 
-                            <div class="caixa_menu_adm_img">
-                                <img src="imagens/admProduct.png">
-                            </div>
-
-                            <div class="caixa_menu_adm_titulo">
-                                <p>Produtos</p>
-                            </div>                    
-                        </div>
-                    </a>                    
-
-                    
-                    <div class="caixa_menu_adm">
-                        <a href="admControleUsuario.php">
-                        
-                            <div class="caixa_menu_adm_img">
-                                <img src="imagens/admUsers.png">
-                            </div>
-
-                            <div class="caixa_menu_adm_titulo">
-                                <p>Usuários</p>
-                            </div>    
-                        </a>
-                    </div>
                 </div>
                 
                 <div class="caixa_menu_direita">

@@ -2,8 +2,9 @@
 
     session_start();
 
-    include_once('../conexao.php');
+
     include_once('carregarMenu.php');
+    include_once('../conexao.php');    
     $conexao = getConexao();
 
 
@@ -24,11 +25,13 @@
 
     $rsUsuario = mysqli_fetch_array($select);
 
+    $userLogado = $rsUsuario['nome'];
+
     $arrayMenu = array();
 
     $arrayMenu = carregarMenu($rsUsuario['idNivel']);
 
-    $userLogado = $rsUsuario['nome'];
+
 
 
 
@@ -70,7 +73,7 @@
                 <div class="caixa_menu_seg_nav">
                     
                     <?php
-                    $i = 0;
+                        $i = 0;
                         while($i < count($arrayMenu)){
                             echo($arrayMenu[$i]);
                             $i++;
