@@ -29,7 +29,7 @@ CREATE TABLE `tbl_opt_menu` (
   `status` tinyint(4) NOT NULL DEFAULT '0',
   `href` varchar(45) NOT NULL,
   PRIMARY KEY (`idOptMenu`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

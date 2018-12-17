@@ -31,7 +31,7 @@ CREATE TABLE `tbl_opt_menu_nivel` (
   KEY `idOptMenu` (`idOptMenu`),
   CONSTRAINT `tbl_opt_menu_nivel_ibfk_1` FOREIGN KEY (`idNivel`) REFERENCES `tbl_niveis` (`id`),
   CONSTRAINT `tbl_opt_menu_nivel_ibfk_2` FOREIGN KEY (`idOptMenu`) REFERENCES `tbl_opt_menu` (`idoptmenu`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

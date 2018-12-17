@@ -30,13 +30,13 @@
             $arrayMenu[$cont] = '
             
             <div class="caixa_menu_adm">
-                <a href="<?php echo('.$href.')?>">                        
+                <a href="'.$href.'">                        
                     <div class="caixa_menu_adm_img">
-                        <img src="<?php echo('.$icone.'])?>">
+                        <img src="'.$icone.'">
                     </div>
 
                     <div class="caixa_menu_adm_titulo">
-                        <p><?php echo('.$nomeOptMenu.')?></p>
+                        <p>'.$nomeOptMenu.'</p>
                     </div>                        
                 </a>
 
