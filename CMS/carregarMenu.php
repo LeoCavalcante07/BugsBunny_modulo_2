@@ -15,7 +15,45 @@
         $selectMenu = mysqli_query($conexao, $sql);
     
         
-        return $selectMenu;
+        
+        
+        
+        $cont = 0;
+        
+        $arrayMenu = array();
+        
+        while($rsMenu = mysqli_fetch_array($selectMenu)){
+            $href  = $rsMenu['href'];
+            $icone  = $rsMenu['icone'];
+            $nomeOptMenu  = $rsMenu['nomeOptMenu'];
+            
+            $arrayMenu[$cont] = '
+            
+            <div class="caixa_menu_adm">
+                <a href="<?php echo('.$href.')?>">                        
+                    <div class="caixa_menu_adm_img">
+                        <img src="<?php echo('.$icone.'])?>">
+                    </div>
+
+                    <div class="caixa_menu_adm_titulo">
+                        <p><?php echo('.$nomeOptMenu.')?></p>
+                    </div>                        
+                </a>
+
+            </div>
+
+            ';
+
+            $cont++;
+
+        }
+
+
+        
+        
+        
+        
+        return $arrayMenu;
         
         
     }

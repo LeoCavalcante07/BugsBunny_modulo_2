@@ -24,7 +24,9 @@
 
     $rsUsuario = mysqli_fetch_array($select);
 
-    $selectMenu = carregarMenu($rsUsuario['idNivel']);
+    $arrayMenu = array();
+
+    $arrayMenu = carregarMenu($rsUsuario['idNivel']);
 
     $userLogado = $rsUsuario['nome'];
 
@@ -68,25 +70,14 @@
                 <div class="caixa_menu_seg_nav">
                     
                     <?php
-
-                        while($rsMenu = mysqli_fetch_array($selectMenu)){
-                    ?>
-                    <div class="caixa_menu_adm">
-                        <a href="<?php echo($rsMenu['href'])?>">                        
-                            <div class="caixa_menu_adm_img">
-                                <img src="<?php echo($rsMenu['icone'])?>">
-                            </div>
-
-                            <div class="caixa_menu_adm_titulo">
-                                <p><?php echo($rsMenu['nomeOptMenu'])?></p>
-                            </div>                        
-                        </a>
-
-                    </div>
-                    
-                    <?php
+                    $i = 0;
+                        while($i < count($arrayMenu)){
+                            echo($arrayMenu[$i]);
+                            $i++;
                         }
+                    
                     ?>
+                    
 
                 </div>
                 
